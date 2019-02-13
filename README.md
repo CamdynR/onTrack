@@ -1,4 +1,6 @@
-lab4
-====
+Cogs 120 Mobile Web App
+--------
+--------
 
-Lab 4: Programming with Javascript
+Name: onTrack
+Goal: Keep users on track during their morning routines through timed audio announcements
