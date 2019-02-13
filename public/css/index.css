@@ -1,8 +1,11 @@
-a {
+h1 {
   color: #43af43;
-  text-decoration: none;
   font-family: 'Roboto', sans-serif;
   font-size: 5rem;
+}
+
+a {
+  text-decoration: none;
 }
 
 a:active {
@@ -11,7 +14,16 @@ a:active {
 }
 
 .loginBtn {
-  position: absolute;
-  margin-top: 260px;
-  margin-left: 127.115px;
+  position: relative;
+  margin-top: 180px;
+}
+
+.loginForm {
+  position: relative;
+  margin-top: 60px;
+}
+
+.submit {
+  position: relative;
+  margin-top: 10px;
 }
