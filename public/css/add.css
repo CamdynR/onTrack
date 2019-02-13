@@ -1,0 +1,145 @@
+/*Add CSS File*/
+
+html {
+  background-color: #efeef3;
+}
+
+body {
+  background-color: #efeef3;
+}
+
+.topBar {
+  background-color: #f5f5f7;
+  border-bottom: 1px solid #a8a7ac;
+  height: 65px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+#add {
+  color: #262626;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+#backButton {
+  color: #b7b7b7;
+  font-size: 2.5rem;
+  left: 0px;
+  padding-left: 20px;
+  position: fixed;
+  text-decoration:none;
+  top: 26px;
+  z-index: 3;
+}
+
+#backButton:active {
+  color: #989898
+}
+
+#backArrow {
+  height: 15px;
+  left: 5px;
+  position: absolute;
+  top: 36px;
+  width: 8px;
+  z-index: 0;
+}
+
+.saveButton {
+  background-color: #f5f5f7; 
+  border: 0 solid white;
+  color: #43af43;
+  float: right;
+  font-size: 2.5rem;
+  right: 5px;
+  top: 23px;
+  position: absolute;
+  z-index: 4;
+}
+
+.saveButton:active {
+  color: #629762;
+}
+
+.saveButton:focus {
+  outline: none;
+}
+
+.nameBar {
+  background-color: white;
+  border-top: 1px solid #c7c7c9;
+  border-bottom: 1px solid #c7c7c9;
+  height: 45px;
+  margin-top: 110px;
+  width: 100%;
+}
+
+.nameBar h3 {
+  color: #c0c0c0;
+  font-size: 2rem;
+  margin-top: 1px;
+  padding-left: 8px;
+  padding-top: 8px;
+}
+
+.nameBar input {
+  font-size: 2rem;
+  border: none;
+  width: 285px;
+}
+
+.nameBar input:focus {
+  outline: none;
+}
+
+.daysOfWeek {
+  background-color: white;
+  border-top: 1px solid #c7c7c9;
+  border-bottom: 1px solid #c7c7c9;
+  color: #c0c0c0;
+  font-size: 1.75rem;
+  list-style: none;
+  margin-top: 35px;
+  margin-left: -32px;
+  padding-top: 8px;
+}
+
+#Freq, #Sun, #Mon, #Tue, #Wed, #Thu, #Fri {
+  border-bottom: 1px solid #c7c7c9;
+}
+
+#Freq {
+  padding-bottom: 8px;
+}
+
+#Sun, #Mon, #Tue, #Wed, #Thu, #Fri, #Sat {
+  color: black;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  position: relative;
+  z-index: 0;
+}
+
+.switch {
+  margin-bottom: -5px;
+  margin-left: 50px;
+  position: relative;
+  padding-left: 200px;
+  z-index: 5
+}
+
+.button {
+  display:inline-block;
+}
+
+#Sat {
+  padding-bottom: 8px;
+}
+
+/* 45 17 */
+
