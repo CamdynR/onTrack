@@ -1,5 +1,19 @@
 /* CSS file for the Home Page */
 
+#logout {
+  color: #adadad;
+  position: absolute;
+  z-index: 2;
+  text-decoration: none;
+  font-size: 1.7rem;
+  top: 5px;
+  left: 7px;
+}
+
+#logout:active {
+  text-decoration: none;
+}
+
 /* Main Logo on Top */
 .Logo img {
   margin-top: 25px;

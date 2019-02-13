@@ -131,14 +131,136 @@ body {
   z-index: 5
 }
 
-#Sun .switch {
-  margin-left: -72px;
+#Sun .switch, #Mon .switch, #Tue .switch, #Wed .switch, #Thu .switch, #Fri .switch, #Sat .switch {
   margin-top: -26px;
   margin-bottom: 0;
   padding-left: 100px;
   padding-bottom: 2px;
   padding-right: 262px;
   padding-top: 14px;
+}
+
+#Sun .switch {
+  margin-left: -72px;
+}
+
+#Mon .switch {
+  margin-left: -75px;
+}
+
+#Tue .switch {
+  margin-left: -79px;
+}
+
+#Wed .switch {
+  margin-left: -105px;
+}
+
+#Thu .switch {
+  margin-left: -86px;
+}
+
+#Fri .switch {
+  margin-left: -61px;
+}
+
+#Sat .switch {
+  margin-left: -83px;
+}
+
+input[type='checkbox'] {
+  opacity: 0;
+}
+
+#SunBtn input:checked ~ #SunCheck {
+  opacity: 1;
+}
+
+#SunCheck {
+  position: absolute;
+  width: 20px;
+  height: 15px;
+  opacity: 0;
+  top: 13px;
+  left: 335px;
+}
+
+#MonBtn input:checked ~ #MonCheck {
+  opacity: 1;
+}
+
+#MonCheck {
+  position: absolute;
+  width: 20px;
+  height: 15px;
+  opacity: 0;
+  top: 13px;
+  left: 335px;
+}
+
+#TueBtn input:checked ~ #TueCheck {
+  opacity: 1;
+}
+
+#TueCheck {
+  position: absolute;
+  width: 20px;
+  height: 15px;
+  opacity: 0;
+  top: 13px;
+  left: 335px;
+}
+
+#WedBtn input:checked ~ #WedCheck {
+  opacity: 1;
+}
+
+#WedCheck {
+  position: absolute;
+  width: 20px;
+  height: 15px;
+  opacity: 0;
+  top: 13px;
+  left: 335px;
+}
+
+#ThuBtn input:checked ~ #ThuCheck {
+  opacity: 1;
+}
+
+#ThuCheck {
+  position: absolute;
+  width: 20px;
+  height: 15px;
+  opacity: 0;
+  top: 13px;
+  left: 335px;
+}
+
+#FriBtn input:checked ~ #FriCheck {
+  opacity: 1;
+}
+
+#FriCheck {
+  position: absolute;
+  width: 20px;
+  height: 15px;
+  opacity: 0;
+  top: 13px;
+  left: 335px;
+}
+
+#SatBtn input:checked ~ #SatCheck {
+  opacity: 1;
+}
+
+#SatCheck {
+  position: absolute;
+  width: 20px;
+  height: 15px;
+  opacity: 0;
+  top: 13px;
+  left: 335px;
 }
 
 .button {
@@ -148,6 +270,4 @@ body {
 #Sat {
   padding-bottom: 8px;
 }
-
-/* 45 17 */
 

@@ -1,0 +1,17 @@
+a {
+  color: #43af43;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 5rem;
+}
+
+a:active {
+  color: #629762;
+  text-decoration: none;
+}
+
+.loginBtn {
+  position: absolute;
+  margin-top: 260px;
+  margin-left: 127.115px;
+}
