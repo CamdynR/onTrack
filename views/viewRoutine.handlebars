@@ -15,6 +15,13 @@
 
 <body>
 	<h1>Temp View Page</h1>
-	
+	<div class="routine">
+	{{#each Routine}}	
+		<div class="Routines" id="firstRoutine">
+			<p>{{name}}</p>
+			<p>{{time}}</p>
+		</div>
+	{{/each}}
+	</div>
 </body>
 </html>
