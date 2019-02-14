@@ -7,22 +7,52 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="/css/index.css" rel="stylesheet">    
+	<link href="/css/onTrack.css" rel="stylesheet">    
 
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300" rel="stylesheet">
 </head>
 
 <body>
-	<center><h1><div class="loginBtn">onTrack</div></h1></center>
-	<div class="loginForm">
-		<center><div id="emailIn"><h5><input type="text" placeholder="Email"></h5></div></center>
-		<center><div id="passIn"><h5><input type="password" placeholder="Password"></h5></div></center>
+	<
+  <a href="/login" id="logout">Login</a>
+	<!-- Head Logo -->
+	<div class="Logo">
+		<center>
+			<img src="images/sunLogo.png" class="img-responsive"></img>
+			<h1>onTrack</h1>
+		</center>
 	</div>
-	<div class="submitBtn">
-		<form action="index.html">
-			<center><button type="submit" class="submit">Login</button></center>
-		</form>
+
+
+	<!-- Start, View, and Add Buttons -->
+	<div class="homeButton" id="startButton">
+		<center><a href="startRoutine" class="button myBtn">
+			<div id="startText">Start <span class="Routine">Routine</span></div>
+		</a></center>
 	</div>
+	<div class="homeButton" id="viewButton">
+		<center><a href="viewRoutine" class="button myBtn">
+			<div id="viewText">View <span class="Routine">Routine</span></div>
+		</a></center>
+	</div>
+	<div class="homeButton" id="addButton">
+		<center><a href="addRoutine" class="button myBtn">
+			<div id="addText">Add <span class="Routine">Routine</span></div>
+		</a></center>
+	</div>
+
+	<!-- Arrows on the right side of the buttons -->
+	<div class="arrows">
+		<div id="firstArrow">
+			<img src="images/rightArrowGray.png" class="img-responsive"></img>
+		</div>
+		<div id="secondArrow">
+			<img src="images/rightArrowGray.png" class="img-responsive"></img>
+		</div>
+		<div id="thirdArrow">
+			<img src="images/rightArrowGray.png" class="img-responsive"></img>
+		</div>
+	<div>
 </body>
 </html>

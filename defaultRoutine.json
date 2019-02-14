@@ -1,0 +1,16 @@
+{
+	"Routine": [
+		{
+			"name": "Get out of bed",
+			"time": "5 mins"
+		},
+		{
+			"name": "Eat Breakfast",
+			"time": "5 mins"
+		},
+		{
+			"name": "Brush Teeth",
+			"time": "5 mins"
+		}
+	]
+}
