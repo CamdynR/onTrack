@@ -14,7 +14,7 @@ body {
   height: 65px;
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 375px;
   z-index: 1;
 }
 
@@ -22,7 +22,7 @@ body {
   color: #262626;
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 375px;
   z-index: 2;
 }
 
@@ -271,3 +271,34 @@ input[type='checkbox'] {
   padding-bottom: 8px;
 }
 
+.taskList {
+  background-color: white;  
+  border-top: 1px solid #c7c7c9;
+  border-bottom: 1px solid #c7c7c9;
+  font-size: 1.75rem;
+  margin-top: 35px;
+}
+
+.taskTitle {
+  color: #c0c0c0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.list {
+  color: black;
+  margin-left: -32px;
+  margin-top: 17px;
+  padding-top: 0px;
+}
+
+.taskTitle {
+  padding-left: 9px;
+  margin-top: 8px;
+}
+
+#newItem {
+  padding-top: 17px;
+}
