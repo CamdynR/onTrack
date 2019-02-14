@@ -1,1 +1,17 @@
 /*View CSS File*/
+
+html {
+  background-color: #efeef3;
+}
+
+body {
+  background-color: #efeef3;
+}
+
+h1 {
+  color: #43af43;
+  font-family: 'Roboto', sans-serif;
+  font-size: 5rem;
+}
+
+

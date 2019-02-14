@@ -65,6 +65,10 @@
   margin-top: 52px;
 }
 
+#loginButton {
+  margin-top: 2px;
+}
+
 /* The Gray Arrows to the right of the buttons */
 #firstArrow {
   height: 38px;
