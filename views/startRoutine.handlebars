@@ -8,7 +8,9 @@
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="/css/start.css" rel="stylesheet"> 
-	<link href="/css/topBar.css" rel="stylesheet">      
+	<link href="/css/topBar.css" rel="stylesheet">     
+	<link href="/css/timer.css" rel="stylesheet"> 
+ 	<script src="/js/timer.js"></script>
 
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300" rel="stylesheet">
@@ -16,7 +18,7 @@
 
 <body>
 	<!-- Main Top Bar -->
-	{{#with Routine.[0]}}
+	{{#with Routine1.[0]}}
 	<div class="topBar">
     	<a href="loggedIn" id="backButton">back</a>
     	<center><h1 id="add">{{name}}</h1></center>
@@ -24,56 +26,101 @@
       		<img src="images/leftArrowGray.png" class="img-responsive"></img>
     	</div>
     	<button type="button" class="saveButton">save</button>
-
-    	<script type="text/javascript">
-
-    		var endTime = new Date().setMinutes({{time}});
-    		var currentTime = new Date().getTime();
-    		var timeLeft = endTime - currentTime;
-
-    		var mins = Math.floor((timeLeft/1000)/60);
-    		var secs = Math.floor(timeLeft/1000);
-
-    		function countdown() {
-				setTimeout('Decrement()',1000);
-			}
-			function Decrement() {
-				if (document.getElementById) {
-					if(endTime < currentTime){
-						alert('Finished');
-						return;
-					}
-					minutes = document.getElementById("minutes");
-					seconds = document.getElementById("seconds");
-					// if less than a minute remaining
-					if (seconds < 59) {
-						seconds.value = secs;
-					} else {
-						minutes.value = getminutes();
-						seconds.value = getseconds();
-					}
-					secs--;
-					setTimeout('Decrement()',1000);
-				}
-			}
-			function getminutes() {
-				// minutes is seconds divided by 60, rounded down
-				mins = Math.floor(secs / 60);
-				return mins;
-			}
-			function getseconds() {
-			// take mins remaining (as seconds) away from total seconds remaining
-				return secs-Math.round(mins *60);
-			}
-		</script>
-		
-		<div id="timer">
-	This is only valid for the next <input id="minutes" type="text"> minutes and <input id="seconds" type="text"> seconds.
-</div>
-<script>
-countdown();
-</script>
     </div>
+
+  <div class='wrapper'>
+  <div class='time-part-wrapper'>
+    <div class='time-part minutes tens'>
+      <div class='digit-wrapper'>
+        <span class='digit'>0</span>
+        <span class='digit'>5</span>
+        <span class='digit'>4</span>
+        <span class='digit'>3</span>
+        <span class='digit'>2</span>
+        <span class='digit'>1</span>
+        <span class='digit'>0</span>
+      </div>
+    </div>
+    <div class='time-part minutes ones'>
+      <div class='digit-wrapper'>
+        <span class='digit'>0</span>
+        <span class='digit'>9</span>
+        <span class='digit'>8</span>
+        <span class='digit'>7</span>
+        <span class='digit'>6</span>
+        <span class='digit'>5</span>
+        <span class='digit'>4</span>
+        <span class='digit'>3</span>
+        <span class='digit'>2</span>
+        <span class='digit'>1</span>
+        <span class='digit'>0</span>
+      </div>
+    </div>
+  </div>
+  <div class='time-part-wrapper'>
+    <div class='time-part seconds tens'>
+      <div class='digit-wrapper'>
+        <span class='digit'>0</span>
+        <span class='digit'>5</span>
+        <span class='digit'>4</span>
+        <span class='digit'>3</span>
+        <span class='digit'>2</span>
+        <span class='digit'>1</span>
+        <span class='digit'>0</span>
+      </div>
+    </div>
+    <div class='time-part seconds ones'>
+      <div class='digit-wrapper'>
+        <span class='digit'>0</span>
+        <span class='digit'>9</span>
+        <span class='digit'>8</span>
+        <span class='digit'>7</span>
+        <span class='digit'>6</span>
+        <span class='digit'>5</span>
+        <span class='digit'>4</span>
+        <span class='digit'>3</span>
+        <span class='digit'>2</span>
+        <span class='digit'>1</span>
+        <span class='digit'>0</span>
+      </div>
+    </div>
+  </div>
+  <div class='time-part-wrapper'>
+    <div class='time-part hundredths tens'>
+      <div class='digit-wrapper'>
+        <span class='digit'>0</span>
+        <span class='digit'>9</span>
+        <span class='digit'>8</span>
+        <span class='digit'>7</span>
+        <span class='digit'>6</span>
+        <span class='digit'>5</span>
+        <span class='digit'>4</span>
+        <span class='digit'>3</span>
+        <span class='digit'>2</span>
+        <span class='digit'>1</span>
+        <span class='digit'>0</span>
+      </div>
+    </div>
+    <div class='time-part hundredths ones'>
+      <div class='digit-wrapper'>
+        <span class='digit'>0</span>
+        <span class='digit'>9</span>
+        <span class='digit'>8</span>
+        <span class='digit'>7</span>
+        <span class='digit'>6</span>
+        <span class='digit'>5</span>
+        <span class='digit'>4</span>
+        <span class='digit'>3</span>
+        <span class='digit'>2</span>
+        <span class='digit'>1</span>
+        <span class='digit'>0</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
     {{/with}}
 	<div class="routine">
 	{{#each Routine}}	

@@ -1,5 +1,5 @@
 {
-	"Routine": [
+	"Routine1": [
 		{
 			"name": "Get out of bed",
 			"time": "5"
@@ -19,6 +19,20 @@
 		{
 			"name": "Brush Teeth",
 			"time": "6"
+		}
+	],
+	"Routine2": [
+		{
+			"name": "Brush Teeth",
+			"time": "6"
+		},
+		{
+			"name": "Collect Things for School",
+			"time": "4"
+		},
+		{
+			"name": "Eat Breakfast",
+			"time": "15"
 		}
 	]
 }

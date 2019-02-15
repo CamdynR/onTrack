@@ -24,11 +24,19 @@
     	</div>
     	<button type="button" class="saveButton">save</button>
     </div>
-	<div class="routine">
-	{{#each Routine}}	
-		<div class="Routines" id="routineAll">
-			<p> Task name: {{name}}</p>
-			<p1> Time allowed: {{time}} minutes</p1>
+	<div class="routine1"> <center><h1 id="routineTitle">Routine 1</h1></center>
+	{{#each Routine1}}	
+		<div class="Routine" id="routine1">
+			<center><p> Task name: {{name}}</p>
+			<p1> Time allowed: {{time}} minutes</p1> </center>
+		</div>
+	{{/each}}
+	</div>
+	<div class="routine2"> <center><h1 id="routineTitle">Routine 2</h1></center>
+	{{#each Routine2}}
+		<div class="Routine" id="routine2">	
+			<center><p> Task name: {{name}}</p>
+			<p1> Time allowed: {{time}} minutes</p1></center>
 		</div>
 	{{/each}}
 	</div>
