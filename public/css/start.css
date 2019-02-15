@@ -69,3 +69,23 @@ h1 {
   top: 680px;
   z-index: 7;
 }
+
+.nextButton {
+  text-decoration: none;
+}
+
+.nextButton:active {
+  text-decoration: none;
+}
+
+#prevTask {
+  text-decoration: none;
+}
+
+#prevTask:active {
+  text-decoration: none;
+}
+
+.next {
+  margin-top: 60px;
+}
