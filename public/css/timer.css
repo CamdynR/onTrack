@@ -12,6 +12,8 @@
   display: inline-block;
   margin-right: 50px;
   position: relative;
+  font-size: 4rem;
+  width: 100%;
 }
 .time-part-wrapper:not(:last-child):after {
   content: ":";

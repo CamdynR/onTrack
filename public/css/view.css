@@ -2,16 +2,61 @@
 
 html {
   background-color: #efeef3;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
   background-color: #efeef3;
 }
 
-h1 {
-  color: #43af43;
-  font-family: 'Roboto', sans-serif;
-  font-size: 5rem;
+#editBtn {
+  color: #b7b7b7;
 }
 
+#yourRoutine {
+  color: #262626;
+  font-size: 3.5rem;
+  font-weight: thin;
+  position: fixed;
+  top: 0px;
+  width: 375px;
+  z-index: 2;
+}
 
+.routine1 {
+  background-color: white;
+  border-top: 1px solid #c7c7c9;
+  border-bottom: 1px solid #c7c7c9;
+  margin-top: 85px;
+  padding-bottom: 3px;
+  margin-bottom: 30px;
+}
+
+.routine2 {
+  background-color: white;
+  border-top: 1px solid #c7c7c9;
+  border-bottom: 1px solid #c7c7c9;
+  margin-top: -10px;
+  padding-bottom: 3px;
+}
+
+.routineTitle {
+  color: #43af43;
+  font-size: 2.5rem;
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 3px;
+  padding-bottom: 0px;
+}
+
+.Routine {
+  padding-top: 4px;
+  padding-bottom: 0px;
+  margin-bottom: -5px;
+  margin-left: 10px;
+  border-top: 1px solid #c7c7c9;
+}
+
+#inputTitle {
+  font-size: 1.7rem;
+}
