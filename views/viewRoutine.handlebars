@@ -17,26 +17,26 @@
 <body>
 	  <!-- Main Top Bar -->
 	<div class="topBar">
-    	<a href="loggedIn" id="backButton">back</a>
-    	<center><h1 id="yourRoutine">Your Routine</h1></center>
+    	<a href="javascript:history.back()" id="backButton">back</a>
+    	<center><h1 id="yourRoutine">View</h1></center>
     	<div id="backArrow">
       		<img src="images/leftArrowGray.png" class="img-responsive"></img>
     	</div>
-    	<button type="button" class="saveButton">save</button>
+			<button type="button" class="saveButton"><span id="editBtn">edit<span></button>
     </div>
-	<div class="routine1"> <center><h1 id="routineTitle">Routine 1</h1></center>
+	<div class="routine1"> <h1 class="routineTitle">Routine 1</h1>
 	{{#each Routine1}}	
 		<div class="Routine" id="routine1">
-			<center><p> Task name: {{name}}</p>
-			<p1> Time allowed: {{time}} minutes</p1> </center>
+			<p> <span class="taskTitles">Task name:</span> <span id="inputTitle">{{name}}</span> <br>
+			<span class="taskTitles">Time allowed:</span> <span id="inputTitle">{{time}}</span> minutes</p>
 		</div>
 	{{/each}}
 	</div>
-	<div class="routine2"> <center><h1 id="routineTitle">Routine 2</h1></center>
+	<div class="routine2"> <h1 class="routineTitle">Routine 2</h1>
 	{{#each Routine2}}
 		<div class="Routine" id="routine2">	
-			<center><p> Task name: {{name}}</p>
-			<p1> Time allowed: {{time}} minutes</p1></center>
+			<p> <span class="taskTitles">Task name:</span> <span id="inputTitle">{{name}}</span> <br>
+			<span class="taskTitles">Time allowed:</span> <span id="inputTitle">{{time}}</span> minutes</p>
 		</div>
 	{{/each}}
 	</div>

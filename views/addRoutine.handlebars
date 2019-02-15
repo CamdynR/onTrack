@@ -16,12 +16,13 @@
 <body>
   <!-- Main Top Bar -->
 	<div class="topBar">
-    <a href="loggedIn" id="backButton">back</a>
+    <a href="javascript:history.back()" id="backButton">back</a>
     <center><h1 id="add">Add</h1></center>
     <div id="backArrow">
       <img src="images/leftArrowGray.png" class="img-responsive"></img>
     </div>
-    <button type="button" class="saveButton">save</button>
+    <button type="button" class="saveButton" onclick="saveTask()">save</button>
+
   </div>
 
   <!-- Name Input Section -->
@@ -108,9 +109,15 @@
 	<div class="taskList">
     <div class="taskTitle">Task List:</div>
     <ul class="list">
-      <li>Shower</li>
-      <li id="newItem">Add new task</li>
+      <li id="showerItem">Shower <span id="showerTime">15 min.</span></li>
+      <li id="newItem">+ Add new task</li>
     </ul>
   </div>
+
+  <script>
+  function saveTask() {
+    alert("Saved Unsuccessfully!");
+  }
+  </script>
 </body>
 </html>
