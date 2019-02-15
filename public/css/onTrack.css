@@ -14,6 +14,24 @@
   text-decoration: none;
 }
 
+#nameChris {
+  color: #43af43;
+  font-size: 1.5rem;
+  margin-top: -18px;
+  margin-left: 315px;
+  position: absolute;
+  z-index: 8;
+}
+
+#iconImg {
+  margin-top: -16px;
+  margin-left: 295px;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  z-index: 8;
+}
+
 /* Main Logo on Top */
 .Logo img {
   margin-top: 25px;
