@@ -13,6 +13,10 @@ body {
   color: #b7b7b7;
 }
 
+.taskTitles {
+  color: #969696;
+}
+
 #yourRoutine {
   color: #262626;
   font-size: 3.5rem;
