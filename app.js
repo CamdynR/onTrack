@@ -14,6 +14,10 @@ var viewRoutine = require('./routes/viewroutine');
 var addRoutine = require('./routes/addRoutine');
 var startRoutine = require('./routes/startRoutine');
 var loggedIn = require('./routes/loggedIn');
+var nextTask1 = require('./routes/nextTask1');
+var nextTask2 = require('./routes/nextTask2');
+var nextTask3 = require('./routes/nextTask3');
+var nextTask4 = require('./routes/nextTask4');
 // Example route
 // var user = require('./routes/user');
 
@@ -46,6 +50,10 @@ app.get('/viewRoutine', viewRoutine.loadView);
 app.get('/addRoutine', addRoutine.addNow);
 app.get('/startRoutine', startRoutine.startNow);
 app.get('/loggedIn', loggedIn.loggedIn);
+app.get('/nextTask1', nextTask1.nextTask1);
+app.get('/nextTask2', nextTask2.nextTask2);
+app.get('/nextTask3', nextTask3.nextTask3);
+app.get('/nextTask4', nextTask4.nextTask4);
 
 // Example route
 // app.get('/users', user.list);

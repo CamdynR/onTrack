@@ -1,1 +1,71 @@
 /*Start CSS File*/
+
+/*View CSS File*/
+
+html {
+  background-color: #efeef3;
+}
+
+body {
+  background-color: #efeef3;
+}
+
+h1 {
+  color: #43af43;
+  font-family: 'Roboto', sans-serif;
+  font-size: 5rem;
+}
+
+#timer {
+	color: #c0c0c0;
+  	font-size: 6rem;
+  	margin-top: 70px;
+  	padding-top: 0px;
+}
+
+#start {
+	color: #000;
+  	font-size: 3rem;
+  	margin-top: 25px;
+  	padding-top: 0px;
+}
+
+#nameOfRoutine {
+	color: #43af43;
+  	font-size: 4rem;
+  	margin-top: 75px;
+  	padding-top: 35px;
+}
+
+.nextButton {
+  color: #43af43;
+  font-size: 4rem;
+  top: 680px;
+  z-index: 4;
+}
+
+.nextButton:active {
+  color: #629762;
+}
+
+.nextButton:focus {
+  outline: none;
+}
+
+.button {
+  display:inline-block;
+}
+
+#prevTask {
+  color: #43af43;
+  font-size: 2rem;
+  top: 680px;
+  z-index: 1;
+}
+
+#skipTask {
+  color: #43af43;
+  font-size: 2rem;
+  top: 680px;
+  z-index: 7;
+}
