@@ -22,7 +22,7 @@
     	<div id="backArrow">
       		<img src="images/leftArrowGray.png" class="img-responsive"></img>
     	</div>
-			<button type="button" class="saveButton"><span id="editBtn">edit<span></button>
+			<button type="button" class="saveButton" onclick="editRoutine()"><span id="editBtn">edit<span></button>
     </div>
 	<div class="routine1"> <h1 class="routineTitle">Routine 1</h1>
 	{{#each Routine1}}	
@@ -40,5 +40,11 @@
 		</div>
 	{{/each}}
 	</div>
+
+	<script>
+  function editRoutine() {
+    alert("Edit function coming soon");
+  }
+  </script>
 </body>
 </html>
