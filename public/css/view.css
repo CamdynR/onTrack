@@ -32,7 +32,7 @@ body {
   border-top: 1px solid #c7c7c9;
   border-bottom: 1px solid #c7c7c9;
   margin-top: 85px;
-  padding-bottom: 3px;
+  padding-bottom: 0px;
   margin-bottom: 30px;
 }
 
@@ -41,7 +41,7 @@ body {
   border-top: 1px solid #c7c7c9;
   border-bottom: 1px solid #c7c7c9;
   margin-top: -10px;
-  padding-bottom: 3px;
+  padding-bottom: 0px;
 }
 
 .routineTitle {
@@ -54,8 +54,8 @@ body {
 }
 
 .Routine {
-  padding-top: 4px;
-  padding-bottom: 0px;
+  padding-top: 8px;
+  padding-bottom: 4px;
   margin-bottom: -5px;
   margin-left: 10px;
   border-top: 1px solid #c7c7c9;
@@ -63,4 +63,10 @@ body {
 
 #inputTitle {
   font-size: 1.7rem;
+}
+
+.time {}
+
+.min {
+  color: #8b8b8b;
 }

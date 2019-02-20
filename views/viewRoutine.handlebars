@@ -27,16 +27,16 @@
 	<div class="routine1"> <h1 class="routineTitle">Routine 1</h1>
 	{{#each Routine1}}	
 		<div class="Routine" id="routine1">
-			<p> <span class="taskTitles">Task name:</span> <span id="inputTitle">{{name}}</span> <br>
-			<span class="taskTitles">Time allowed:</span> <span id="inputTitle">{{time}}</span> minutes</p>
+			<p> <span id="inputTitle">{{name}}</span> 
+			<span id="inputTitle" style="float:right; margin-right: 10px;"><span class="time">{{time}}</span> <span class="min">min.</span></span></p>
 		</div>
 	{{/each}}
 	</div>
 	<div class="routine2"> <h1 class="routineTitle">Routine 2</h1>
 	{{#each Routine2}}
 		<div class="Routine" id="routine2">	
-			<p> <span class="taskTitles">Task name:</span> <span id="inputTitle">{{name}}</span> <br>
-			<span class="taskTitles">Time allowed:</span> <span id="inputTitle">{{time}}</span> minutes</p>
+			<p> <span id="inputTitle">{{name}}</span> 
+			<span id="inputTitle" style="float:right; margin-right: 10px;"><span class="time">{{time}}</span> <span class="min">min.</span></span></p>
 		</div>
 	{{/each}}
 	</div>
