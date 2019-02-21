@@ -12,7 +12,6 @@
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300" rel="stylesheet">
 	<!-- Main Top Bar -->
-	{{#with Routine1.[0]}}
 	<div class="topBar">
     	<a href="loggedIn" id="backButton">back</a>
     	<center><h1 id="start">Current Routine</h1></center>
@@ -20,18 +19,16 @@
       		<img src="images/leftArrowGray.png" class="img-responsive"></img>
     	</div>
     </div>
-    {{/with}}
 </head>
 
 <body>
-	{{#with Routine1.[0]}}
+	{{#with Routine3.[2]}}
 	<center><h1 id="nameOfRoutine">{{name}}</h1></center>
     <center><p id="timer"></p></center>
 
     <script type="text/javascript">
     	var countDownTimer = new Date();
-    	countDownTimer.setMinutes(countDownTimer.getMinutes() + {{time}});
-
+        countDownTimer.setMinutes(countDownTimer.getMinutes() + {{time}} + 0.1);
     	var counter = setInterval(function() {
     		var currentTime = new Date().getTime();
 
@@ -45,15 +42,16 @@
     		if(timeLeft < 0) {
     			clearInterval(counter);
     			document.getElementById("timer").innerHTML = "Task is over!";
+                setTimeout(function(){ window.location = "oneR3";}, 2000);
+
     		}
     	}, 1000);
 
     </script>
-	{{/with}}
 
-	<div class="next">
-		<center><a href="nextTask1" class="nextButton">Next Task</a></center>
-	</div>
-
+    {{/with}}
+    <div class="next">
+        <center><a href="oneR3" class="nextButton">Next Task</a></center>
+    </div>
 </body>
 </html>

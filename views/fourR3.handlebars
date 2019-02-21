@@ -22,14 +22,13 @@
 </head>
 
 <body>
-	{{#with Routine1.[3]}}
+	{{#with Routine3.[4]}}
 	<center><h1 id="nameOfRoutine">{{name}}</h1></center>
     <center><p id="timer"></p></center>
 
     <script type="text/javascript">
     	var countDownTimer = new Date();
-    	countDownTimer.setMinutes(countDownTimer.getMinutes() + {{time}});
-
+    	countDownTimer.setMinutes(countDownTimer.getMinutes() + {{time}} + 0.1);
     	var counter = setInterval(function() {
     		var currentTime = new Date().getTime();
 
@@ -43,15 +42,18 @@
     		if(timeLeft < 0) {
     			clearInterval(counter);
     			document.getElementById("timer").innerHTML = "Task is over!";
+                setTimeout(function(){ window.location = "loggedIn";}, 2000);
+                //document.getElementById("next").click();
+                //document.write("<a href="loggedIn"></a>");
     		}
     	}, 1000);
 
     </script>
 
     {{/with}}
-	<div class="next">
-		<center><a href="nextTask4" class="nextButton">Next Task</a></center>
-    <center><a href="nextTask2" id="prevTask">Previous Task</a></center>
-	</div>
+    <div class="next">
+        <center><a href="loggedIn"><button class="nextButton" id="next">Finish!</a></button></center>
+    <center><a href="threeR3" id="prevTask">Previous Task</a><center>
+    </div>
 </body>
 </html>

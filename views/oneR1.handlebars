@@ -1,0 +1,59 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>onTrack</title>	
+	<meta charset="utf-8">	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/css/start.css" rel="stylesheet"> 
+	<link href="/css/topBar.css" rel="stylesheet">     
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300" rel="stylesheet">
+	<!-- Main Top Bar -->
+	<div class="topBar">
+    	<a href="loggedIn" id="backButton">back</a>
+    	<center><h1 id="start">Current Routine</h1></center>
+    	<div id="backArrow">
+      		<img src="images/leftArrowGray.png" class="img-responsive"></img>
+    	</div>
+    </div>
+</head>
+
+<body>
+	{{#with Routine1.[1]}}
+	<center><h1 id="nameOfRoutine">{{name}}</h1></center>
+    <center><p id="timer"></p></center>
+
+    <script type="text/javascript">
+    	var countDownTimer = new Date();
+
+        countDownTimer.setMinutes(countDownTimer.getMinutes() + {{time}} + 0.1);
+
+    	var counter = setInterval(function() {
+    		var currentTime = new Date().getTime();
+
+    		var timeLeft = countDownTimer - currentTime;
+
+    		var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    		var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+    		document.getElementById("timer").innerHTML = minutes + " minutes " + seconds + " seconds";
+
+    		if(timeLeft < 0) {
+    			clearInterval(counter);
+    			document.getElementById("timer").innerHTML = "Task is over!";
+                setTimeout(function(){ window.location = "twoR1";}, 2000);
+    		}
+    	}, 1000);
+
+    </script>
+
+    {{/with}}
+	<div class="next">
+		<center><a href="twoR1" class="nextButton">Next Task</a></center>
+    <center><a href="startOne" id="prevTask">Previous Task</a></center>
+	</div>
+</body>
+</html>
