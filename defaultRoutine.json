@@ -23,16 +23,46 @@
 	],
 	"Routine2": [
 		{
-			"name": "Brush Teeth",
-			"time": "6"
+			"name": "Get out of bed",
+			"time": "5"
 		},
 		{
-			"name": "Collect Things for School",
+			"name": "Shower",
+			"time": "15"
+		},
+		{
+			"name": "Get Dressed",
 			"time": "4"
 		},
 		{
 			"name": "Eat Breakfast",
 			"time": "15"
+		},
+		{
+			"name": "Brush Teeth",
+			"time": "6"
+		}
+	],
+	"Routine": [
+		{
+			"name": "Get out of bed",
+			"time": "5"
+		},
+		{
+			"name": "Shower",
+			"time": "15"
+		},
+		{
+			"name": "Get Dressed",
+			"time": "4"
+		},
+		{
+			"name": "Eat Breakfast",
+			"time": "15"
+		},
+		{
+			"name": "Brush Teeth",
+			"time": "6"
 		}
 	]
 }

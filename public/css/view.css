@@ -44,6 +44,14 @@ body {
   padding-bottom: 0px;
 }
 
+.routine3 {
+  background-color: white;
+  border-top: 1px solid #c7c7c9;
+  border-bottom: 1px solid #c7c7c9;
+  margin-top: 21px;
+  padding-bottom: 0px;
+}
+
 .routineTitle {
   color: #43af43;
   font-size: 2.5rem;
@@ -65,8 +73,34 @@ body {
   font-size: 1.7rem;
 }
 
-.time {}
+.nameIn::placeholder {
+  color: black;
+  font-size: 1.7rem;
+}
+
+.nameIn {
+  color: black;
+  font-size: 1.7rem;
+}
+
+.timeIn::placeholder {
+  color: black;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.timeIn {
+  color: black;
+  font-size: 1.7rem;
+  float: right;
+  margin-right: 45px;
+  text-align: center;
+  width: 35px;
+}
 
 .min {
   color: #8b8b8b;
+  margin-top: -23px;
+  margin-left: 325px;
+  position: absolute;
 }
