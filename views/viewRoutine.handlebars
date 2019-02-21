@@ -8,42 +8,192 @@
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="/css/view.css" rel="stylesheet">  
-	<link href="/css/topBar.css" rel="stylesheet">   
+	<link href="/css/topBar.css" rel="stylesheet">  
+	<script type="text/javascript" src="defaultRoutine.json"></script> 
 
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300" rel="stylesheet">
 </head>
 
 <body>
-	  <!-- Main Top Bar -->
+	<!-- Main Top Bar -->
 	<div class="topBar">
-    	<a href="javascript:history.back()" id="backButton">back</a>
-    	<center><h1 id="yourRoutine">View</h1></center>
-    	<div id="backArrow">
-      		<img src="images/leftArrowGray.png" class="img-responsive"></img>
-    	</div>
-			<button type="button" class="saveButton" onclick="editRoutine()"><span id="editBtn">edit<span></button>
-    </div>
-	<div class="routine1"> <h1 class="routineTitle">Routine 1</h1>
-	{{#each Routine1}}	
-		<div class="Routine" id="routine1">
-			<p> <span id="inputTitle">{{name}}</span> 
-			<span id="inputTitle" style="float:right; margin-right: 10px;"><span class="time">{{time}}</span> <span class="min">min.</span></span></p>
+		<a href="javascript:history.back()" id="backButton">back</a>
+		<center><h1 id="yourRoutine">View</h1></center>
+		<div id="backArrow">
+				<img src="images/leftArrowGray.png" class="img-responsive"></img>
 		</div>
-	{{/each}}
+		<button type="button" class="saveButton" onclick="saveTask()">save</button>
 	</div>
-	<div class="routine2"> <h1 class="routineTitle">Routine 2</h1>
-	{{#each Routine2}}
-		<div class="Routine" id="routine2">	
-			<p> <span id="inputTitle">{{name}}</span> 
-			<span id="inputTitle" style="float:right; margin-right: 10px;"><span class="time">{{time}}</span> <span class="min">min.</span></span></p>
+
+	<div class="routine1"><h1 class="routineTitle">Routine 1</h1>
+	{{#with Routine1.[0]}}	
+		<div class="Routine" id="routine2">
+			<input id="nameIn0" class="nameIn" type="text" value="{{name}}"></input>
+			<input id="timeIn0" class="timeIn" type="number" value="{{time}}"></input>
+			<p> <span class="min">min.</span></p>
 		</div>
-	{{/each}}
+	{{/with}}
+	{{#with Routine1.[1]}}	
+		<div class="Routine" id="routine2">
+			<input id="nameIn1" class="nameIn" type="text" value="{{name}}"></input>
+			<input id="timeIn1" class="timeIn" type="number" value="{{time}}"></input>
+			<p> <span class="min">min.</span></p>
+		</div>
+	{{/with}}
+	{{#with Routine1.[2]}}	
+		<div class="Routine" id="routine2">
+			<input id="nameIn2" class="nameIn" type="text" value="{{name}}"></input>
+			<input id="timeIn2" class="timeIn" type="number" value="{{time}}"></input>
+			<p> <span class="min">min.</span></p>
+		</div>
+	{{/with}}
+	{{#with Routine1.[3]}}	
+		<div class="Routine" id="routine2">
+			<input id="nameIn3" class="nameIn" type="text" value="{{name}}"></input>
+			<input id="timeIn3" class="timeIn" type="number" value="{{time}}"></input>
+			<p> <span class="min">min.</span></p>
+		</div>
+	{{/with}}
+	{{#with Routine1.[4]}}	
+		<div class="Routine" id="routine2">
+			<input id="nameIn4" class="nameIn" type="text" value="{{name}}"></input>
+			<input id="timeIn4" class="timeIn" type="number" value="{{time}}"></input>
+			<p> <span class="min">min.</span></p>
+		</div>
+	{{/with}}
+	</div>
+
+
+	<div class="routine2"><h1 class="routineTitle">Routine 2</h1>
+	{{#with Routine2.[0]}}	
+		<div class="Routine" id="routine2">
+			<input id="nameIn5" class="nameIn" type="text" value="{{name}}"></input>
+			<input id="timeIn5" class="timeIn" type="number" value="{{time}}"></input>
+			<p> <span class="min">min.</span></p>
+		</div>
+	{{/with}}
+	{{#with Routine2.[1]}}	
+		<div class="Routine" id="routine2">
+			<input id="nameIn6" class="nameIn" type="text" value="{{name}}"></input>
+			<input id="timeIn6" class="timeIn" type="number" value="{{time}}"></input>
+			<p> <span class="min">min.</span></p>
+		</div>
+	{{/with}}
+	{{#with Routine2.[2]}}	
+		<div class="Routine" id="routine2">
+			<input id="nameIn7" class="nameIn" type="text" value="{{name}}"></input>
+			<input id="timeIn7" class="timeIn" type="number" value="{{time}}"></input>
+			<p> <span class="min">min.</span></p>
+		</div>
+	{{/with}}
+	{{#with Routine2.[3]}}	
+		<div class="Routine" id="routine2">
+			<input id="nameIn8" class="nameIn" type="text" value="{{name}}"></input>
+			<input id="timeIn8" class="timeIn" type="number" value="{{time}}"></input>
+			<p> <span class="min">min.</span></p>
+		</div>
+	{{/with}}
+	{{#with Routine2.[4]}}	
+		<div class="Routine" id="routine2">
+			<input id="nameIn9" class="nameIn" type="text" value="{{name}}"></input>
+			<input id="timeIn9" class="timeIn" type="number" value="{{time}}"></input>
+			<p> <span class="min">min.</span></p>
+		</div>
+	{{/with}}
+	</div>
+
+	<div class="routine3"><h1 class="routineTitle">Routine 3</h1>
+	{{#with Routine3.[0]}}	
+		<div class="Routine" id="routine2">
+			<input id="nameIn10" class="nameIn" type="text" value="{{name}}"></input>
+			<input id="timeIn10" class="timeIn" type="number" value="{{time}}"></input>
+			<p> <span class="min">min.</span></p>
+		</div>
+	{{/with}}
+	{{#with Routine3.[1]}}	
+		<div class="Routine" id="routine2">
+			<input id="nameIn11" class="nameIn" type="text" value="{{name}}"></input>
+			<input id="timeIn11" class="timeIn" type="number" value="{{time}}"></input>
+			<p> <span class="min">min.</span></p>
+		</div>
+	{{/with}}
+	{{#with Routine3.[2]}}	
+		<div class="Routine" id="routine2">
+			<input id="nameIn12" class="nameIn" type="text" value="{{name}}"></input>
+			<input id="timeIn12" class="timeIn" type="number" value="{{time}}"></input>
+			<p> <span class="min">min.</span></p>
+		</div>
+	{{/with}}
+	{{#with Routine3.[3]}}	
+		<div class="Routine" id="routine2">
+			<input id="nameIn13" class="nameIn" type="text" value="{{name}}"></input>
+			<input id="timeIn13" class="timeIn" type="number" value="{{time}}"></input>
+			<p> <span class="min">min.</span></p>
+		</div>
+	{{/with}}
+	{{#with Routine3.[4]}}	
+		<div class="Routine" id="routine2">
+			<input id="nameIn14" class="nameIn" type="text" value="{{name}}"></input>
+			<input id="timeIn14" class="timeIn" type="number" value="{{time}}"></input>
+			<p> <span class="min">min.</span></p>
+		</div>
+	{{/with}}
 	</div>
 
 	<script>
-  function editRoutine() {
-    alert("Edit function coming soon");
+  function saveTask() {
+		// Routine Names
+		var r1name1 = document.getElementById('nameIn0');
+		var r1name2 = document.getElementById('nameIn1');
+		var r1name3 = document.getElementById('nameIn2');
+		var r1name4 = document.getElementById('nameIn3');
+		var r1name5 = document.getElementById('nameIn4');
+
+		var r2name1 = document.getElementById('nameIn5');
+		var r2name2 = document.getElementById('nameIn6');
+		var r2name3 = document.getElementById('nameIn7');
+		var r2name4 = document.getElementById('nameIn8');
+		var r2name5 = document.getElementById('nameIn9');
+
+		var r3name1 = document.getElementById('nameIn10');
+		var r3name2 = document.getElementById('nameIn11');
+		var r3name3 = document.getElementById('nameIn12');
+		var r3name4 = document.getElementById('nameIn13');
+		var r3name5 = document.getElementById('nameIn14');
+
+		// Routine Time
+		var r1time1 = document.getElementById('timeIn0');
+		var r1time2 = document.getElementById('timeIn1');
+		var r1time3 = document.getElementById('timeIn2');
+		var r1time4 = document.getElementById('timeIn3');
+		var r1time5 = document.getElementById('timeIn4');
+
+		var r2time1 = document.getElementById('timeIn5');
+		var r2time2 = document.getElementById('timeIn6');
+		var r2time3 = document.getElementById('timeIn7');
+		var r2time4 = document.getElementById('timeIn8');
+		var r2time5 = document.getElementById('timeIn9');
+
+		var r3time1 = document.getElementById('timeIn10');
+		var r3time2 = document.getElementById('timeIn11');
+		var r3time3 = document.getElementById('timeIn12');
+		var r3time4 = document.getElementById('timeIn13');
+		var r3time5 = document.getElementById('timeIn14');
+
+    
+		var local_data = Routine1;
+		alert(local_data.[0].[0]);
+    var row_data = '';
+    for (var i = 0; i < local_data.length; i++) {
+      var row_data = row_data + '<tr>' +
+        ' <td>' + local_data[i].first_name + ' ' + local_data[i].last_name + '</td>' +
+        ' <td>' + local_data[i].email + '</td>' +
+        ' <td>' + local_data[i].gender + '< /td>' +
+        '</tr>';
+    }
+    var table_body_element = document.createElement('tbody');
+    table_body_element.innerHTML = row_data;
   }
   </script>
 </body>
