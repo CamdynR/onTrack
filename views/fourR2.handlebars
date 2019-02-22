@@ -12,6 +12,7 @@
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300" rel="stylesheet">
 	<!-- Main Top Bar -->
+	{{#with Routine1.[0]}}
 	<div class="topBar">
     	<a href="loggedIn" id="backButton">back</a>
     	<center><h1 id="start">Current Routine</h1></center>
@@ -19,24 +20,25 @@
       		<img src="images/leftArrowGray.png" class="img-responsive"></img>
     	</div>
     </div>
+    {{/with}}
 </head>
 
 <body>
 	{{#with Routine2.[4]}}
-	<div id="nameOfRoutine">{{name}}
+	<center>
+	<div id="nameOfRoutine"><span id="routineText">{{name}}</span>
 		<div class="centerCircle"></div>
 		<div id="timer"></div>
 	</div>
-	<div class="circle" style="animation-delay: -3s"></div>
+	<!-- div class="circle" style="animation-delay: -3s"></div>
 	<div class="circle" style="animation-delay: -2s"></div>
 	<div class="circle" style="animation-delay: -1s"></div>
 	<div class="circle" style="animation-delay: 0s"></div>
-
+	</center -->
 
     <script type="text/javascript">
     	var countDownTimer = new Date();
-    	countDownTimer.setMinutes(countDownTimer.getMinutes() + {{time}} + 0.1);
-
+        countDownTimer.setMinutes(countDownTimer.getMinutes() + {{time}} + 0.1);
     	var counter = setInterval(function() {
     		var currentTime = new Date().getTime();
 
@@ -46,16 +48,16 @@
     		var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
             if(seconds >= 10 && minutes != 0){
-				document.getElementById("timer").innerHTML = minutes + " : " + seconds + "s";
+				document.getElementById("timer").innerHTML = minutes + " : " + seconds;
 			}
 			else if(seconds < 10 && minutes != 0){
-				document.getElementById("timer").innerHTML = minutes + " : 0" + seconds + "s";
+				document.getElementById("timer").innerHTML = minutes + " : 0" + seconds;
 			}
 			else if(seconds >= 10 && minutes == 0){
-				document.getElementById("timer").innerHTML = seconds + "s";
+				document.getElementById("timer").innerHTML = seconds;
 			}
 			else{
-				document.getElementById("timer").innerHTML = "0" + seconds + "s";
+				document.getElementById("timer").innerHTML = "0" + seconds;
 			}
     		if(timeLeft < 0) {
     			clearInterval(counter);
@@ -65,11 +67,12 @@
     	}, 1000);
 
     </script>
-    
-    {{/with}}
-    <div class="next">
-        <center><a href="loggedIn" class="nextButton">Finish!</a></center>
-    <center><a href="threeR2" id="prevTask">Previous Task</a><center>
-    </div>
+	{{/with}}
+
+	<div class="next">
+		<center><a href="loggedIn" class="nextButton">Finish!</a></center>
+    	<center><a href="threeR2" id="prevTask">Previous Task</a><center>
+	</div>
+
 </body>
 </html>
