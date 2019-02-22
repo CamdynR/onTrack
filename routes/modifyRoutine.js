@@ -1,7 +1,7 @@
 var defaultData = require('../defaultRoutine.json');
 fs = require('fs');
 var m = JSON.parse(fs.readFileSync('defaultRoutine.json').toString());
-var routineOne = require('../tdata.json');
+var routineOne = require('../empty.json');
 
 exports.saveRoutine = function(req,res) {
 	// console.log(m.Routine1[0]['name']);
@@ -26,11 +26,25 @@ exports.saveRoutine = function(req,res) {
 	// task5.push('time', req.query.timeIn4);
 
 	// var routineOne = new JSONObject();
-	routineOne.friends.push({"name": req.query.nameIn0});
-	routineOne.friends.push({"name": req.query.nameIn1});
-	routineOne.friends.push({"name": req.query.nameIn2});
-	routineOne.friends.push({"name": req.query.nameIn3});
-	routineOne.friends.push({"name": req.query.nameIn4});
+	routineOne.Routine1.push({"name": req.query.nameIn0, "time": req.query.timeIn0});
+	routineOne.Routine1.push({"name": req.query.nameIn1, "time": req.query.timeIn1});
+	routineOne.Routine1.push({"name": req.query.nameIn2, "time": req.query.timeIn2});
+	routineOne.Routine1.push({"name": req.query.nameIn3, "time": req.query.timeIn3});
+	routineOne.Routine1.push({"name": req.query.nameIn4, "time": req.query.timeIn4});
+
+	routineOne.Routine2.push({"name": req.query.nameIn5, "time": req.query.timeIn5});
+	routineOne.Routine2.push({"name": req.query.nameIn6, "time": req.query.timeIn6});
+	routineOne.Routine2.push({"name": req.query.nameIn7, "time": req.query.timeIn7});
+	routineOne.Routine2.push({"name": req.query.nameIn8, "time": req.query.timeIn8});
+	routineOne.Routine2.push({"name": req.query.nameIn9, "time": req.query.timeIn9});
+
+	routineOne.Routine3.push({"name": req.query.nameIn10, "time": req.query.timeIn10});
+	routineOne.Routine3.push({"name": req.query.nameIn11, "time": req.query.timeIn11});
+	routineOne.Routine3.push({"name": req.query.nameIn12, "time": req.query.timeIn12});
+	routineOne.Routine3.push({"name": req.query.nameIn13, "time": req.query.timeIn13});
+	routineOne.Routine3.push({"name": req.query.nameIn14, "time": req.query.timeIn14});
+	
+	console.log(routineOne);
 
 	// routineOne.push(task2);
 	// routineOne.push(task3);
@@ -76,6 +90,9 @@ exports.saveRoutine = function(req,res) {
 	m.Routine3[2]['time'] = req.query.timeIn12;
 	m.Routine3[3]['time'] = req.query.timeIn13;
 	m.Routine3[4]['time'] = req.query.timeIn14;
+
+	
+
 
 	fs.writeFile('defaultRoutine.json', JSON.stringify(m),function(err, result) {
      	if(err) console.log('error', err);
