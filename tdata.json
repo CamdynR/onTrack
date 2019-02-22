@@ -1,0 +1,71 @@
+{	
+	"Routines": [{
+	"Routine1": [
+		{
+			"name": "Get out of bed",
+			"time": "5"
+		},
+		{
+			"name": "Shower",
+			"time": "15"
+		},
+		{
+			"name": "Get Dressed",
+			"time": "4"
+		},
+		{
+			"name": "Eat Breakfast",
+			"time": "15"
+		},
+		{
+			"name": "Brush Teeth",
+			"time": "6"
+		}
+	]},
+	{"Routine2": [
+		{
+			"name": "Brush Teeth",
+
+			"time": "1"
+		},
+		{
+			"name": "Collect Things for School",
+			"time": "1"
+		},
+		{
+			"name": "Eat Breakfast",
+			"time": "1"
+		},
+				{
+			"name": "Brush Teeth",
+			"time": "1"
+		},
+		{
+			"name": "Collect Things for School",
+			"time": "1"
+		}
+	]},
+	{"Routine3": [
+		{
+			"name": "I",
+			"time": "13"
+		},
+		{
+			"name": "Am",
+			"time": "2"
+		},
+				{
+			"name": "Testing",
+			"time": "32"
+		},
+		{
+			"name": "This",
+			"time": "66"
+		},
+		{
+			"name": "Out",
+			"time": "3"
+		}
+	]}
+]
+}
