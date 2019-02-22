@@ -42,7 +42,7 @@ exports.saveRoutine = function(req,res) {
 	m.Routine3[3]['time'] = req.query.timeIn13;
 	m.Routine3[4]['time'] = req.query.timeIn14;
 
-	fs.writeFileSync('defaultRoutine.json', JSON.stringify(m),function(err, result) {
+	fs.writeFile('defaultRoutine.json', JSON.stringify(m),function(err, result) {
      	if(err) console.log('error', err);
    	});
 
