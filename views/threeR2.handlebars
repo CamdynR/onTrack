@@ -23,8 +23,14 @@
 
 <body>
 	{{#with Routine2.[3]}}
-	<center><h1 id="nameOfRoutine">{{name}}</h1></center>
-    <center><p id="timer"></p></center>
+	<div id="nameOfRoutine">{{name}}
+		<div class="centerCircle"></div>
+		<div id="timer"></div>
+	</div>
+	<div class="circle" style="animation-delay: -3s"></div>
+	<div class="circle" style="animation-delay: -2s"></div>
+	<div class="circle" style="animation-delay: -1s"></div>
+	<div class="circle" style="animation-delay: 0s"></div>
 
     <script type="text/javascript">
     	var countDownTimer = new Date();
@@ -37,8 +43,18 @@
     		var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
     		var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-    		document.getElementById("timer").innerHTML = minutes + " minutes " + seconds + " seconds";
-
+            if(seconds >= 10 && minutes != 0){
+				document.getElementById("timer").innerHTML = minutes + " : " + seconds + "s";
+			}
+			else if(seconds < 10 && minutes != 0){
+				document.getElementById("timer").innerHTML = minutes + " : 0" + seconds + "s";
+			}
+			else if(seconds >= 10 && minutes == 0){
+				document.getElementById("timer").innerHTML = seconds + "s";
+			}
+			else{
+				document.getElementById("timer").innerHTML = "0" + seconds + "s";
+			}
     		if(timeLeft < 0) {
     			clearInterval(counter);
     			document.getElementById("timer").innerHTML = "Task is over!";
