@@ -21,7 +21,7 @@ body {
   color: #262626;
   font-size: 3.5rem;
   font-weight: thin;
-  position: fixed;
+  position: relative;
   top: 0px;
   width: 375px;
   z-index: 2;
@@ -93,7 +93,7 @@ body {
   color: black;
   font-size: 1.7rem;
   float: right;
-  margin-right: 45px;
+  margin-right: 43px;
   text-align: center;
   width: 35px;
 }
@@ -101,6 +101,6 @@ body {
 .min {
   color: #8b8b8b;
   margin-top: -23px;
-  margin-left: 325px;
-  position: absolute;
+  margin-right: 10px;
+  float: right;
 }

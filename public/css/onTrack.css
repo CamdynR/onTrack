@@ -17,25 +17,24 @@
 #nameChris {
   color: #43af43;
   font-size: 1.5rem;
-  margin-top: -18px;
-  margin-left: 315px;
-  position: absolute;
-  z-index: 8;
+  float: right;
+  margin-top: -68px;
+  margin-right: 8px;
 }
 
 #iconImg {
-  margin-top: -16px;
-  margin-left: 295px;
+  margin-top: -66px;
+  margin-right: 63px;
+  float: right;
   width: 15px;
   height: 15px;
-  position: absolute;
-  z-index: 8;
 }
 
 /* Main Logo on Top */
 .Logo img {
-  margin-top: 25px;
+  margin-top: 75px;
   width: 80%;
+  max-width: 300px;
 }
 
 /* Main Title below Logo */
@@ -70,13 +69,17 @@
   color: #43af43;
 }
 
-#startText, #viewText, #addText {
+#startText, #viewText {
   height: 128px;
   padding-top: 28px;
 }
 
 #startButton, #viewButton, #addButton {
   border-top: 2px solid #dddddd;
+}
+
+#viewButton {
+  border-bottom: 2px solid #dddddd;
 }
 
 #startButton {
@@ -90,18 +93,20 @@
 /* The Gray Arrows to the right of the buttons */
 #firstArrow {
   height: 38px;
-  left: 350px;
-  position: absolute;
-  top: 324px;
+  /*left: 350px;
+  position: absolute;*/
+  margin-top: -211px;
+  margin-right: 6px;
+  float: right;
   width: 20px;
   z-index: 0;
 }
 
 #secondArrow {
   height: 38px;
-  left: 350px;
-  position: absolute;
-  top: 454px;
+  margin-top: -81px;
+  margin-right: 6px;
+  float: right;
   width: 20px;
   z-index: 0;
 }
