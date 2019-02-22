@@ -98,3 +98,49 @@ a.button {
     text-decoration: none;
     color: initial;
 }
+
+#cancelButton1 {
+  color: #989898;
+  font-size: 2.5rem;
+  left: 0px;
+  padding-left: 10px;
+  position: fixed;
+  text-decoration:none;
+  top: 2px;
+  z-index: 3;
+}
+
+#cancelButton1:active {
+  color: #7c7c7c
+}
+
+/* Select Routine Below */
+
+.routineOne {
+  margin-top: 250px;
+  margin-bottom: 10px;
+}
+
+.routineTwo {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.routineThree {
+  margin-top: 10px;
+}
+
+#routineOneText, #routineTwoText, #routineThreeText {
+  border: 1px solid #43af43;
+  background-color: white;
+  color: #8f8f8f;
+  padding-top: 7px;
+  width: 300px;
+  height: 60px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
+}
+
+#routineOneText:active, #routineTwoText:active, #routineThreeText:active {
+  background-color: #f4f4f4;
+}
