@@ -11,9 +11,11 @@ var handlebars = require('express3-handlebars');
 var index = require('./routes/index');
 var login = require('./routes/login');
 var viewRoutine = require('./routes/viewroutine');
+var modifyRoutine = require('./routes/modifyRoutine');
 var addRoutine = require('./routes/addRoutine');
 var loggedIn = require('./routes/loggedIn');
 var selectRoutine = require('./routes/selectRoutine');
+var tester = require('./routes/tester');
 
 //Routine 1 Pages
 var startOne = require('./routes/startOne');
@@ -64,9 +66,11 @@ if ('development' == app.get('env')) {
 app.get('/', index.view);
 app.get('/login', login.loginNow);
 app.get('/viewRoutine', viewRoutine.loadView);
+app.get('/modifyRoutine', modifyRoutine.saveRoutine);
 app.get('/addRoutine', addRoutine.addNow);
 app.get('/loggedIn', loggedIn.loggedIn);
 app.get('/selectRoutine', selectRoutine.selectRoutine);
+app.get('/tester',tester.testing);
 
 //Routine 1 Pages
 app.get('/startOne', startOne.startOne);
