@@ -1,8 +1,43 @@
 var defaultData = require('../defaultRoutine.json');
 fs = require('fs');
 var m = JSON.parse(fs.readFileSync('defaultRoutine.json').toString());
+var routineOne = require('../tdata.json');
+
 exports.saveRoutine = function(req,res) {
-	console.log(m.Routine1[0]['name']);
+	// console.log(m.Routine1[0]['name']);
+	// var task1 = new JSONObject();
+	// task1.push('name', req.query.nameIn0);
+	// task1.push('time', req.query.timeIn0);
+
+	// var task2 = new JSONObject();
+	// task2.push('name', req.query.nameIn1);
+	// task2.push('time', req.query.timeIn1);
+
+	// var task3 = new JSONObject();
+	// task3.push('name', req.query.nameIn2);
+	// task3.push('time', req.query.timeIn2);
+
+	// var task4 = new JSONObject();
+	// task4.push('name', req.query.nameIn3);
+	// task4.push('time', req.query.timeIn3);
+
+	// var task5 = new JSONObject();
+	// task5.push('name', req.query.nameIn4);
+	// task5.push('time', req.query.timeIn4);
+
+	// var routineOne = new JSONObject();
+	routineOne.friends.push({"name": req.query.nameIn0});
+	routineOne.friends.push({"name": req.query.nameIn1});
+	routineOne.friends.push({"name": req.query.nameIn2});
+	routineOne.friends.push({"name": req.query.nameIn3});
+	routineOne.friends.push({"name": req.query.nameIn4});
+
+	// routineOne.push(task2);
+	// routineOne.push(task3);
+	// routineOne.push(task4);
+	// routineOne.push(task5);
+
+
 
 	m.Routine1[0]['name'] = req.query.nameIn0;
 	m.Routine1[1]['name'] = req.query.nameIn1;
