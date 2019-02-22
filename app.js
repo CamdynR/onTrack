@@ -16,6 +16,7 @@ var addRoutine = require('./routes/addRoutine');
 var loggedIn = require('./routes/loggedIn');
 var selectRoutine = require('./routes/selectRoutine');
 var tester = require('./routes/tester');
+var updater = require('./routes/update');
 
 //Routine 1 Pages
 var startOne = require('./routes/startOne');
@@ -71,6 +72,8 @@ app.get('/addRoutine', addRoutine.addNow);
 app.get('/loggedIn', loggedIn.loggedIn);
 app.get('/selectRoutine', selectRoutine.selectRoutine);
 app.get('/tester',tester.testing);
+app.get('/update',updater.updateView);
+
 
 //Routine 1 Pages
 app.get('/startOne', startOne.startOne);
