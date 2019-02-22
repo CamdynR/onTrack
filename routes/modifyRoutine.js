@@ -2,6 +2,7 @@ var defaultData = require('../defaultRoutine.json');
 fs = require('fs');
 var m = JSON.parse(fs.readFileSync('defaultRoutine.json').toString());
 var routineOne = require('../empty.json');
+var host;
 
 exports.saveRoutine = function(req,res) {
 	// console.log(m.Routine1[0]['name']);
@@ -26,6 +27,28 @@ exports.saveRoutine = function(req,res) {
 	// task5.push('time', req.query.timeIn4);
 
 	// var routineOne = new JSONObject();
+	console.log(routineOne);
+
+	if (routineOne.Routine1.length == 5) {
+		routineOne.Routine1.pop();
+		routineOne.Routine1.pop();
+		routineOne.Routine1.pop();
+		routineOne.Routine1.pop();
+		routineOne.Routine1.pop();
+
+		routineOne.Routine2.pop();
+		routineOne.Routine2.pop();
+		routineOne.Routine2.pop();
+		routineOne.Routine2.pop();
+		routineOne.Routine2.pop();
+
+		routineOne.Routine3.pop();
+		routineOne.Routine3.pop();
+		routineOne.Routine3.pop();
+		routineOne.Routine3.pop();
+		routineOne.Routine3.pop();
+	}
+
 	routineOne.Routine1.push({"name": req.query.nameIn0, "time": req.query.timeIn0});
 	routineOne.Routine1.push({"name": req.query.nameIn1, "time": req.query.timeIn1});
 	routineOne.Routine1.push({"name": req.query.nameIn2, "time": req.query.timeIn2});
@@ -98,7 +121,9 @@ exports.saveRoutine = function(req,res) {
      	if(err) console.log('error', err);
    	});
 
+	host = routineOne
+	res.render('viewRoutine', host);
 
-	res.render('viewRoutine', m);
 }
+
 
