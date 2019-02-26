@@ -1,0 +1,15 @@
+html {
+  background: darkGreen;
+}
+
+body {
+  background: darkGreen;
+}
+
+.topBar {
+  background: rgb(115, 172, 115)
+}
+
+#backButton {
+  color: black;
+}
