@@ -17,11 +17,11 @@
 
 <body>
 	<!-- Main Top Bar -->
-	{{# each friends}}
+	{{# each this}}
 		<h1 name="routineLabel" value="{{@key}}">{{@key}}</h1>
 		{{# each this}}
-			<p>{{name}}</p>
-			<p>{{time}}</p>
+			<p>{{this.name}}</p>
+			<p>{{this.time}}</p>
 		{{/each}}
 	{{/each}}
 	<form id="modifyRoutine" role="form" method='get' action='/modifyTasks'>

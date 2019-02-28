@@ -1,0 +1,41 @@
+{
+	"Users":[
+		{
+			"Name": "NewUser1",
+			"Routines":[
+				{
+					"Name":"Routine1",
+					"Tasks":[
+						{"name":"Wake Up","time":"20"},
+						{"name":"B","time":"3", "id":"localTime or increment"},
+						{"name":"Brush Teeth","time":"6"}]
+				},
+				{
+					"Name":"Routine2",
+					"Tasks":[
+						{"name":"Wake Up","time":"20"},
+						{"name":"B","time":"3"},
+						{"name":"Brush Teeth","time":"6"}]
+				}
+			]
+		},
+		{
+			"Name": "NewUser2",
+			"Routines":[
+				{
+					"Name":"Routine1",
+					"Tasks":[
+						{"name":"Wake Up","time":"20"},
+						{"name":"B","time":"3"},
+						{"name":"Brush Teeth","time":"6"}]
+				},
+				{
+					"Name":"Routine2",
+					"Tasks":[
+						{"name":"Wake Up","time":"20"},
+						{"name":"B","time":"3"},
+						{"name":"Brush Teeth","time":"6"}]
+				}
+			]
+		}]
+}
