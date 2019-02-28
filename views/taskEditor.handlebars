@@ -17,20 +17,20 @@
 
 <body>
 	<!-- Main Top Bar -->
-	{{# each newUser}}
+	{{# each friends}}
+		<h1 name="routineLabel" value="{{@key}}">{{@key}}</h1>
 		{{# each this}}
-			<h1>{{@key}}</h1>
-			<!-- {{# each this}}
-				<p>{{this.name}}</p>
-				<p>{{this.time}}</p>
-			{{/each}} -->
+			<p>{{name}}</p>
+			<p>{{time}}</p>
 		{{/each}}
 	{{/each}}
-	<form id="modifyRoutine" role="form" method='get' action='/modifyRoutine'>
-		<input type="submit" id="submitBtn" class="btn btn-default" value="Add Routine"></input>
+	<form id="modifyRoutine" role="form" method='get' action='/modifyTasks'>
 		<div class="form-group">
 			<input type="text" class="form-control" id="curName" placeholder="Name" name="tempName">
+			<input id="curTime" name="tempTime" class="timeIn" type="number" ></input>
+					<p> <span class="min">min.</span></p>
 		</div>
+		<input type="submit" id="submitBtn" class="btn btn-default" value="Add Routine"></input>
 	</form>
 </body>
 </html>
