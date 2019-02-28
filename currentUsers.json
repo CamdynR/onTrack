@@ -1,7 +1,7 @@
 {
 	"Users":[
 		{
-			"Name": "NewUser1",
+			"Name": "guestUser",
 			"Routines":[
 				{
 					"Name":"Routine1",

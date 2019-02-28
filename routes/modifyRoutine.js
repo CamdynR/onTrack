@@ -1,12 +1,13 @@
 // var defaultData = require('../defaultRoutine.json');
 // fs = require('fs');
 // var m = JSON.parse(fs.readFileSync('defaultRoutine.json').toString());
-var data = require('../userRoutines.json');
+var data = require('../currentUsers.json');
 
 exports.saveRoutine = function(req,res) {
 	var routName = String(req.query.tempName);
-	var toPush = {[routName] : []};
-	data.newUser.push(toPush);
+	var toPush = {"Name": routName,"Tasks": []}
+	data.Users[0].Routines.push(toPush);
+	console.log(data.Users[0].Routines);
 	//data.newUser[3] = toPush;
 
 	// if (routineOne.Routine1.length == 5) {
@@ -94,8 +95,8 @@ exports.saveRoutine = function(req,res) {
 	// fs.writeFile('defaultRoutine.json', JSON.stringify(m),function(err, result) {
  //     	if(err) console.log('error', err);
  //   	});
- 	console.log(data['newUser'][3]);
-	res.render('taskEditor', data['newUser'][3]);
+ 	console.log(data.Users[0].Routines[2]);
+	res.render('taskEditor', data.Users[0].Routines[2]);
 
 }
 

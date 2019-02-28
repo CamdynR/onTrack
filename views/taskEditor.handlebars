@@ -17,12 +17,10 @@
 
 <body>
 	<!-- Main Top Bar -->
-	{{# each this}}
-		<h1 name="routineLabel" value="{{@key}}">{{@key}}</h1>
-		{{# each this}}
-			<p>{{this.name}}</p>
-			<p>{{this.time}}</p>
-		{{/each}}
+	<h1>{{this.Name}}</h1>
+	{{# each Tasks}}
+		<p>{{this.name}}</p>
+		<p>{{this.time}}</p>
 	{{/each}}
 	<form id="modifyRoutine" role="form" method='get' action='/modifyTasks'>
 		<div class="form-group">

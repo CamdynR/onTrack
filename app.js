@@ -78,7 +78,7 @@ app.get('/tester',tester.testing);
 app.get('/update',updater.updateView);
 app.get('/clear', clear.clearRoutine);
 app.get('/taskEditor', taskEditor.taskEditor);
-app.get('./modifyTasks', modifyTasks.modifyTasks);
+app.get('/modifyTasks', modifyTasks.modifyTasks);
 
 
 //Routine 1 Pages
