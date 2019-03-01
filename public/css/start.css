@@ -271,15 +271,14 @@ h1 {
 }
 
 #routineText {
-  background-color: white;
-  border: 1px solid #43af43;
+  background-color: clear;
   color: black;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  font-size: 4rem;
+  font-size: 5rem;
   display: inline-block;
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 5px;
-  padding-bottom: 5px;
+  padding-bottom: 0px;
 }
