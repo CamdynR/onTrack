@@ -12,7 +12,6 @@
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300" rel="stylesheet">
 	<!-- Main Top Bar -->
-	{{#with Routine1.[0]}}
 	<div class="topBar">
     	<a href="loggedIn" id="backButton">back</a>
     	<center><h1 id="start">Routine 2</h1></center>
@@ -20,11 +19,9 @@
       		<img src="images/leftArrowGray.png" class="img-responsive"></img>
     	</div>
     </div>
-    {{/with}}
 </head>
 
 <body>
-	{{#with Routine2.[0]}}
 	<center>
 	<div id="nameOfRoutine"><div id="routineText">{{name}}</div>
 		<div class="centerCircle"></div>
@@ -62,15 +59,15 @@
     		if(timeLeft < 0) {
     			clearInterval(counter);
     			document.getElementById("timer").innerHTML = "Task is over!";
-                setTimeout(function(){ window.location = "oneR2";}, 2000);
+                setTimeout(function(){ window.location = "startTwo";}, 2000);
     		}
     	}, 1000);
 
     </script>
-	{{/with}}
+
 
 	<div class="next">
-		<center><a href="oneR2" class="nextButton">Next Task</a></center>
+		<center><a href="startTwo" class="nextButton">Continue!</a></center>
 	</div>
 
 </body>

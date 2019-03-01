@@ -29,5 +29,15 @@ a:active {
 }
 
 #fbLogBttn {
-  top: 300px;
+  top: 600px;
+}
+
+.aButton {
+  color: #43af43;
+  font-size: 3rem;
+}
+
+.guest {
+  color: #4B5894;
+  font-size: 3rem;
 }
