@@ -1,0 +1,39 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>onTrack</title>	
+	<meta charset="utf-8">	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/css/view.css" rel="stylesheet">  
+	<link href="/css/topBar.css" rel="stylesheet">  
+	<!--<script type="text/javascript" src="viewRoutine"></script> -->
+
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300" rel="stylesheet">
+</head>
+
+<body>
+	<!-- Main Top Bar -->
+	<h1>{{this.Name}}</h1>
+	<p name="parentRoutine">{{this.Index}}</p>
+	{{# each Tasks}}
+		<p>{{this.name}} : {{this.time}}</p>
+		<form id="deleteRoutine" role="form" method='get' action='/deleteTask'>
+			<p class="target" id="parentRoutine" value="{{this.Index}}" name="parentRoutine">{{this.Index}}</p>
+			<!-- <input type="text" class="form-control" id="curName" value="{{this.Index}}" name="parentRoutine"> -->
+			<input type="submit" id="submitBtn" name="task" class="btn btn-default" value="{{@index}}">Delete ^</input>
+		</form>
+	{{/each}}
+	<form id="modifyRoutine" role="form" method='get' action='/modifyTasksB'>
+		<div class="form-group">
+			<input type="text" class="form-control" id="curName" placeholder="Name" name="tempName">
+			<input id="curTime" name="tempTime" class="timeIn" type="number" ></input>
+					<p> <span class="min">min.</span></p>
+		</div>
+		<input type="submit" id="submitBtn" class="btn btn-default" value="Add Task"></input>
+	</form>
+</body>
+</html>
