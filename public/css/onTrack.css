@@ -48,9 +48,19 @@
 
 /* Main Buttons on the Home Screen */
 .homeButton {
-  background-color: white;
-  height: 130px;
+  background-color: clear;
+  height: 170px;
   width: 100%;
+}
+
+#viewButton {
+  position: fixed;
+  bottom: 0;
+}
+
+#startButton {
+  position: fixed;
+  bottom: 170px;
 }
 
 .homeButton:active {
@@ -71,7 +81,7 @@
 
 #startText, #viewText {
   height: 128px;
-  padding-top: 28px;
+  padding-top: 46px;
 }
 
 #startButton, #viewButton, #addButton {
@@ -93,20 +103,20 @@
 /* The Gray Arrows to the right of the buttons */
 #firstArrow {
   height: 38px;
-  /*left: 350px;
-  position: absolute;*/
-  margin-top: -211px;
+  position: fixed;
+  bottom: 65px;
+  right: 0;
   margin-right: 6px;
-  float: right;
   width: 20px;
   z-index: 0;
 }
 
 #secondArrow {
   height: 38px;
-  margin-top: -81px;
+  position: fixed;
+  bottom: 235px;
+  right: 0;
   margin-right: 6px;
-  float: right;
   width: 20px;
   z-index: 0;
 }
