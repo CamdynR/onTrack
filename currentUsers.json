@@ -5,6 +5,7 @@
 			"Routines":[
 				{
 					"Name":"Routine1",
+					"Index": "0",
 					"Tasks":[
 						{"name":"Wake Up","time":"20"},
 						{"name":"B","time":"3", "id":"localTime or increment"},
@@ -12,9 +13,10 @@
 				},
 				{
 					"Name":"Routine2",
+					"Index": "1",
 					"Tasks":[
-						{"name":"Wake Up","time":"20"},
-						{"name":"B","time":"3"},
+						{"name":"Roll","time":"20"},
+						{"name":"Dino","time":"3"},
 						{"name":"Brush Teeth","time":"6"}]
 				}
 			]

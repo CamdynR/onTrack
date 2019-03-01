@@ -3,7 +3,7 @@
 // var m = JSON.parse(fs.readFileSync('defaultRoutine.json').toString());
 var data = require('../currentUsers.json');
 
-exports.saveRoutine = function(req,res) {
+exports.saveRoutineB = function(req,res) {
 	console.log(req.query.rout);
 	var routName = String(req.query.tempName);
 	var toPush = {"Name": routName,"Tasks": []}

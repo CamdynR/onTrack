@@ -1,3 +1,3 @@
-exports.loggedIn = function(req, res){
+exports.loggedInB = function(req, res){
   res.render('loggedInB');
 };

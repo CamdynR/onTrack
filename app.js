@@ -19,6 +19,15 @@ var tester = require('./routes/tester');
 var updater = require('./routes/update');
 var clear = require('./routes/clear');
 
+//B PAGES
+var viewRoutineB = require('./routes/viewroutineB');
+var modifyRoutineB = require('./routes/modifyRoutineB');
+var loggedInB = require('./routes/loggedInB');
+var selectRoutineB = require('./routes/selectRoutineB');
+var modifyTasksB = require('./routes/modifyTasksB');
+var modifyExistingB = require('./routes/modifyExistingB');
+var deleteTask = require('./routes/deleteTask');
+
 //Routine 1 Pages
 var startOne = require('./routes/startOne');
 
@@ -64,6 +73,16 @@ app.get('/selectRoutine', selectRoutine.selectRoutine);
 app.get('/tester',tester.testing);
 app.get('/update',updater.updateView);
 app.get('/clear', clear.clearRoutine);
+
+//B PAGES
+app.get('/viewRoutineB', viewRoutineB.loadViewB);
+app.get('/modifyRoutineB', modifyRoutineB.saveRoutineB);
+app.get('/loggedInB', loggedInB.loggedInB);
+app.get('/selectRoutineB', selectRoutineB.selectRoutineB);
+app.get('/modifyTasksB', modifyTasksB.modifyTasksB);
+app.get('/modifyExistingB', modifyExistingB.modifyExistingB);
+app.get('/deleteTask', deleteTask.deleteTask);
+
 
 
 //Routine 1 Pages
