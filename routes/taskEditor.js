@@ -1,6 +1,5 @@
-var routineOne = require('../userRoutines.json');
+var data = require('../currentUsers.json');
 exports.taskEditor = function(req,res) {
-	var routName = req.query.curName;
-	console.log(routineOne['newUser'][3]['routName']);
-	res.render("taskEditor", routineOne['newUser'][3]['routName']);
+	var index = data.Users[0].Routines.length;
+	res.render("taskEditor", data.Users[0].Routines[index]);
 };

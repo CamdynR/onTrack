@@ -20,6 +20,8 @@ var updater = require('./routes/update');
 var clear = require('./routes/clear');
 var taskEditor = require('./routes/taskEditor');
 var modifyTasks = require('./routes/modifyTasks');
+var modifyExisting = require('./routes/modifyExisting');
+var deleteTask = require('./routes/deleteTask');
 
 //Routine 1 Pages
 var startOne = require('./routes/startOne');
@@ -79,6 +81,8 @@ app.get('/update',updater.updateView);
 app.get('/clear', clear.clearRoutine);
 app.get('/taskEditor', taskEditor.taskEditor);
 app.get('/modifyTasks', modifyTasks.modifyTasks);
+app.get('/modifyExisting', modifyExisting.modifyExisting);
+app.get('/deleteTask', deleteTask.deleteTask);
 
 
 //Routine 1 Pages

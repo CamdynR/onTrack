@@ -18,14 +18,11 @@
 <body>
 	<!-- Main Top Bar -->
 	{{# each Users.[0].Routines}}
-		<h1>{{this.Name}}</h1>
-		<!-- {{# each this}}
-			<h1>{{@key}}</h1>
-			{{# each this}}
-				<p>{{this.name}}</p>
-				<p>{{this.time}}</p>
-			{{/each}}
-		{{/each}} -->
+		<!-- <h1>{{this.Name}}</h1> -->
+		<!-- <a href="taskEditor" id="{{@index}}"><h1>{{this.Name}}</h1></a> -->
+		<form id="selectRoutine" role="form" method='get' action='/modifyExisting'>
+			<input type="submit" id="submitBtn" name="rout" class="btn btn-default" value="{{@index}}">{{this.Name}}</input>
+		</form>
 	{{/each}}
 	<form id="modifyRoutine" role="form" method='get' action='/modifyRoutine'>
 		<input type="submit" id="submitBtn" class="btn btn-default" value="Add Routine"></input>

@@ -4,10 +4,17 @@
 var data = require('../currentUsers.json');
 
 exports.saveRoutine = function(req,res) {
+	console.log(req.query.rout);
 	var routName = String(req.query.tempName);
 	var toPush = {"Name": routName,"Tasks": []}
+	if (typeof req.query.rout == "undefined") {
+		var index = data.Users[0].Routines.length;
+	}
+	else {
+		var index = req.query.rout;
+	}
 	data.Users[0].Routines.push(toPush);
-	console.log(data.Users[0].Routines);
+	// console.log(data.Users[0].Routines);
 	//data.newUser[3] = toPush;
 
 	// if (routineOne.Routine1.length == 5) {
@@ -95,8 +102,8 @@ exports.saveRoutine = function(req,res) {
 	// fs.writeFile('defaultRoutine.json', JSON.stringify(m),function(err, result) {
  //     	if(err) console.log('error', err);
  //   	});
- 	console.log(data.Users[0].Routines[2]);
-	res.render('taskEditor', data.Users[0].Routines[2]);
+ 	// console.log(data.Users[0].Routines[index]);
+	res.render('taskEditor', data.Users[0].Routines[index]);
 
 }
 
