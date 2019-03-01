@@ -36,6 +36,7 @@
 	<div class="circle" style="animation-delay: 0s"></div>
 	</center -->
 
+	<audio loop id="bellDing" src="sounds/radar.mp3" preload="auto" type="audio/mp3"></audio>
     <script type="text/javascript">
     	var countDownTimer = new Date();
         countDownTimer.setMinutes(countDownTimer.getMinutes() + {{time}} + 0.1);
@@ -62,7 +63,7 @@
     		if(timeLeft < 0) {
     			clearInterval(counter);
     			document.getElementById("timer").innerHTML = "Task is over!";
-                setTimeout(function(){ window.location = "threeR3";}, 2000);
+                setTimeout(function(){ window.location = "threeR3";}, 10000);
     		}
     	}, 1000);
 
