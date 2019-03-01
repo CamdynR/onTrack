@@ -17,8 +17,9 @@
 
 <body>
 	<!-- Main Top Bar -->
+	<a href="\loggedInB" id="utton">back</a>
 	<h1>{{this.Name}}</h1>
-	<p name="parentRoutine">{{this.Index}}</p>
+	{{!-- <p name="parentRoutine">{{this.Index}}</p> --}}
 	{{# each Tasks}}
 		<p>{{this.name}} : {{this.time}}</p>
 		<form id="deleteRoutine" role="form" method='get' action='/deleteTask'>
@@ -33,7 +34,7 @@
 			<input id="curTime" name="tempTime" class="timeIn" type="number" ></input>
 					<p> <span class="min">min.</span></p>
 		</div>
-		<input type="submit" id="submitBtn" class="btn btn-default" value="Add Task"></input>
+		<input type="submit" id="submitBtn" class="btn btn-default" name="indexer" value="{{this.Index}}"></input>
 	</form>
 </body>
 </html>

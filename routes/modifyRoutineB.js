@@ -6,7 +6,7 @@ var data = require('../currentUsers.json');
 exports.saveRoutineB = function(req,res) {
 	console.log(req.query.rout);
 	var routName = String(req.query.tempName);
-	var toPush = {"Name": routName,"Tasks": []}
+	var toPush = {"Name": routName,"Index":data.Users[0].Routines.length,"Tasks": []}
 	if (typeof req.query.rout == "undefined") {
 		var index = data.Users[0].Routines.length;
 	}
