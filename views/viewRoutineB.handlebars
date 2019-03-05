@@ -13,6 +13,7 @@
 
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -22,7 +23,8 @@
 		<!-- <h1>{{this.Name}}</h1> -->
 		<!-- <a href="taskEditor" id="{{@index}}"><h1>{{this.Name}}</h1></a> -->
 		<form id="selectRoutine" role="form" method='get' action='/modifyExistingB'>
-			<input type="submit" id="submitBtn" name="rout" class="btn btn-default" value="{{@index}}">{{this.Name}}</input>
+			<input type="text" class="toHide" id="routIndex" placeholder="Description" value="{{@index}}" name="routName">
+			<input type="submit" id="submitBtn" name="rout" class="btn btn-default" value="{{this.Name}}"></input>
 		</form>
 	{{/each}}
 	<form id="modifyRoutine" role="form" method='get' action='/modifyRoutineB'>
@@ -31,5 +33,8 @@
 			<input type="text" class="form-control" id="curName" placeholder="Name" name="tempName">
 		</div>
 	</form>
+	<script type="text/javascript">
+		$(".toHide").hide()
+	</script>
 </body>
 </html>
