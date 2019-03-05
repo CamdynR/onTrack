@@ -27,6 +27,7 @@ var selectRoutineB = require('./routes/selectRoutineB');
 var modifyTasksB = require('./routes/modifyTasksB');
 var modifyExistingB = require('./routes/modifyExistingB');
 var deleteTask = require('./routes/deleteTask');
+var deleteRoutine = require('./routes/deleteRoutine');
 
 //Routine 1 Pages
 var startOne = require('./routes/startOne');
@@ -82,6 +83,7 @@ app.get('/selectRoutineB', selectRoutineB.selectRoutineB);
 app.get('/modifyTasksB', modifyTasksB.modifyTasksB);
 app.get('/modifyExistingB', modifyExistingB.modifyExistingB);
 app.get('/deleteTask', deleteTask.deleteTask);
+app.get('/deleteRoutine', deleteRoutine.deleteRoutine);
 
 
 

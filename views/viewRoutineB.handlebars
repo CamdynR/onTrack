@@ -23,8 +23,14 @@
 		<!-- <h1>{{this.Name}}</h1> -->
 		<!-- <a href="taskEditor" id="{{@index}}"><h1>{{this.Name}}</h1></a> -->
 		<form id="selectRoutine" role="form" method='get' action='/modifyExistingB'>
-			<input type="text" class="toHide" id="routIndex" placeholder="Description" value="{{@index}}" name="routName">
+			<input type="text" class="toHide" id="routIndex" value="{{@index}}" name="routName">
 			<input type="submit" id="submitBtn" name="rout" class="btn btn-default" value="{{this.Name}}"></input>
+		</form>
+		<form id="deleteRoutine" role="form" method='get' action='/deleteRoutine'>
+			<div class="form-group">
+		      <input type="text" class="toHide" id="routIndex" value="{{@index}}" name="routIndex">
+		    </div>
+			<input type="submit" id="submitBtn" name="task" class="btn btn-default" value="Delete"></input>
 		</form>
 	{{/each}}
 	<form id="modifyRoutine" role="form" method='get' action='/modifyRoutineB'>
