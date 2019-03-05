@@ -21,17 +21,16 @@
 	<a href="\viewRoutineB" id="button">back</a>
 	<h1>{{this.Name}}</h1>
 	<!-- {{!-- <p name="parentRoutine">{{this.Index}}</p> --}} -->
+	<p id="taskLength" value="{{this.Tasks}}"></p>
 	{{# each Tasks}}
-		<p> Description: {{this.name}} : {{this.time}} min.</p>
+		<h2> Description: {{this.name}}</h2>
+		<h2> Time: {{this.time}} min.</h2>
 		<form id="deleteRoutine" role="form" method='get' action='/deleteTask'>
-			<!-- <p class="target" id="parentRoutine" value="{{this.Index}}" name="parentRoutine">{{this.Index}}</p> -->
-			<!-- <input type="text" class="form-control" id="curName" value="{{this.Index}}" name="parentRoutine"> -->
-			<!-- <label for="submitBtn" value="{{@index}}" name="parentRoutine">Label:</label> -->
 			<div class="form-group">
-		      <!-- <label for="description">Description:</label> -->
-		      <input type="text" class="form-control" id="description" placeholder="Description" value="{{../Index}}" name="parentRoutine">
+		      <input type="text" class="toHide" id="parRout" placeholder="Description" value="{{../Index}}" name="parentRoutine">
+		      <input type="text" class="toHide" id="taskIndex" placeholder="Description" value="{{@index}}" name="taskIndex">
 		    </div>
-			<input type="submit" id="submitBtn" name="task" class="btn btn-default" value="{{@index}}">Delete ^</input>
+			<input type="submit" id="submitBtn" name="task" class="btn btn-default" value="Delete"></input>
 		</form>
 	{{/each}}
 	<form id="modifyRoutine" role="form" method='get' action='/modifyTasksB'>
@@ -40,7 +39,14 @@
 			<input id="curTime" name="tempTime" class="timeIn" type="number" ></input>
 					<p> <span class="min">min.</span></p>
 		</div>
-		<input type="submit" id="submitBtn" class="btn btn-default" name="indexer" value="{{this.Index}}"></input>
+		<div class="form-group">
+			<input type="text" class="toHide" id="routIndex" name="routIndex" value="{{this.Index}}">
+			<input type="submit" id="submitBtn" class="btn btn-default" name="indexer" value="Add Task"></input>
+		</div>
+		
 	</form>
+	<script type="text/javascript">
+		$(".toHide").hide()
+	</script>
 </body>
 </html>
