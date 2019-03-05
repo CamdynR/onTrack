@@ -13,18 +13,24 @@
 
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
 	<!-- Main Top Bar -->
-	<a href="\loggedInB" id="utton">back</a>
+	<a href="\viewRoutineB" id="button">back</a>
 	<h1>{{this.Name}}</h1>
-	{{!-- <p name="parentRoutine">{{this.Index}}</p> --}}
+	<!-- {{!-- <p name="parentRoutine">{{this.Index}}</p> --}} -->
 	{{# each Tasks}}
-		<p>{{this.name}} : {{this.time}}</p>
+		<p> Description: {{this.name}} : {{this.time}} min.</p>
 		<form id="deleteRoutine" role="form" method='get' action='/deleteTask'>
-			<p class="target" id="parentRoutine" value="{{this.Index}}" name="parentRoutine">{{this.Index}}</p>
+			<!-- <p class="target" id="parentRoutine" value="{{this.Index}}" name="parentRoutine">{{this.Index}}</p> -->
 			<!-- <input type="text" class="form-control" id="curName" value="{{this.Index}}" name="parentRoutine"> -->
+			<!-- <label for="submitBtn" value="{{@index}}" name="parentRoutine">Label:</label> -->
+			<div class="form-group">
+		      <!-- <label for="description">Description:</label> -->
+		      <input type="text" class="form-control" id="description" placeholder="Description" value="{{../Index}}" name="parentRoutine">
+		    </div>
 			<input type="submit" id="submitBtn" name="task" class="btn btn-default" value="{{@index}}">Delete ^</input>
 		</form>
 	{{/each}}
