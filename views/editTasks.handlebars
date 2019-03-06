@@ -1,0 +1,40 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>onTrack</title>	
+	<meta charset="utf-8">	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/css/view.css" rel="stylesheet">  
+	<link href="/css/topBar.css" rel="stylesheet">  
+	<!--<script type="text/javascript" src="viewRoutine"></script> -->
+
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<!-- Main Top Bar -->
+	<a href="\viewRoutineB" id="button">back</a>
+
+	<form id="updateTasks" role="form" method='get' action='/updateTasks'>
+		<center><input name="routName" value="{{this.Name}}"></h1></center>
+		<input type="text" class="toHide" id="editIndex" value="{{this.Index}}" name="editIndex">
+		<!-- {{!-- <p name="parentRoutine">{{this.Index}}</p> --}} -->
+		<p id="taskLength" value="{{this.Tasks}}"></p>
+		{{# each Tasks}}
+			<h2> Description:</h2>
+			<input type="text" name="tempName" value="{{this.name}}"></input>
+			<h2> Time: </h2>
+			<input type="number" name="tempTime" value="{{this.time}}"></input>
+		{{/each}}
+		<input type="submit" id="submitBtn" name="saveTasks" class="btn btn-default" value="Save"></input>
+	</form>
+	<script type="text/javascript">
+		$(".toHide").hide()
+	</script>
+</body>
+</html>

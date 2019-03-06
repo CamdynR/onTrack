@@ -19,7 +19,14 @@
 <body>
 	<!-- Main Top Bar -->
 	<a href="\viewRoutineB" id="button">back</a>
-	<h1>{{this.Name}}</h1>
+	<form id="editTasks" role="form" method='get' action='/editTasks'>
+		<div class="form-group">
+	    	<input type="text" class="toHide" id="editIndex" placeholder="Description" value="{{this.Index}}" name="editIndex">
+	    </div>
+		<input type="submit" id="submitBtn" name="task" class="btn btn-default" value="Edit"></input>
+	</form>
+	<center><h1>{{this.Name}}</h1></center>
+
 	<!-- {{!-- <p name="parentRoutine">{{this.Index}}</p> --}} -->
 	<p id="taskLength" value="{{this.Tasks}}"></p>
 	{{# each Tasks}}
