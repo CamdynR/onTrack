@@ -8,28 +8,34 @@
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="/css/start.css" rel="stylesheet"> 
-	<link href="/css/topBar.css" rel="stylesheet">     
+	<link href="/css/topBar.css" rel="stylesheet">   
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
-    <div class="cancelButton">
-        <a href="javascript:history.back()" id="cancelButton1">cancel</a>
+    <div class="selectBar">
+        <div class="cancelButton">
+            <a href="loggedInB" id="cancelButton1">cancel</a>
+        </div>
+        <div class="editButton">
+            <a href="viewRoutineB" id="editButton1">edit</a>
+        </div>
     </div>
-    <div class="editButton">
-        <center><a href="viewRoutineB" id="editButton1">Edit Routines</a></center>
+    <div id="selRoutine">
+        <center><h1 id="selRoutText">Select a Routine:</h1></center>
     </div>
-    <div id="selRoutine"><center><h1 id="selRoutText">Select a Routine:</h1></center></div>
+    <div class="routineButtons"><center>
     {{# each Users.[0].Routines}}
-        <form id="selectRoutine" role="form" method='get' action='/startRoutineB'>
-            <input type="text" class="toHide" id="routIndex" value="{{this.Index}}" name="routName">
-            <input type="text" class="toHide" id="curTask" value="0" name="curTask">
-            <input type="text" class="toHide" id="reference" value="selectRoutine" name="reference">
-            <input type="submit" id="submitBtn" name="rout" class="btn btn-default" value="{{this.Name}}"></input>
-        </form>
+            <form id="selectRoutine" role="form" method='get' action='/startRoutineB'>
+                <input type="text" class="toHide" id="routIndex" value="{{this.Index}}" name="routName">
+                <input type="text" class="toHide" id="curTask" value="0" name="curTask">
+                <input type="text" class="toHide" id="reference" value="selectRoutine" name="reference">
+                <input type="submit" id="submitBtn" name="rout" class="btn btn-default" value="{{this.Name}}"></input>
+            </form>
     {{/each}}
+    </center></div>
     <script type="text/javascript">
         $(".toHide").hide()
     </script>
