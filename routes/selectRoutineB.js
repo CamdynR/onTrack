@@ -1,5 +1,5 @@
-var defaultData = require('../defaultRoutine.json');
+var data = require('../currentUsers.json');
 
 exports.selectRoutineB = function(req,res) {
-	res.render('selectRoutineB', defaultData);
+	res.render('selectRoutineB', data);
 };

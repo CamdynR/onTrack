@@ -11,6 +11,7 @@
 	<link href="/css/topBar.css" rel="stylesheet">     
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -18,10 +19,21 @@
         <a href="javascript:history.back()" id="cancelButton1">cancel</a>
     </div>
     <div class="editButton">
-        <center><a href="viewRoutine" id="editButton1">Edit Routines</a></center>
+        <center><a href="viewRoutineB" id="editButton1">Edit Routines</a></center>
     </div>
     <div id="selRoutine"><center><h1 id="selRoutText">Select a Routine:</h1></center></div>
-    <div class="routineOne" id="firstButton">
+    {{# each Users.[0].Routines}}
+        <form id="selectRoutine" role="form" method='get' action='/startRoutineB'>
+            <input type="text" class="toHide" id="routIndex" value="{{this.Index}}" name="routName">
+            <input type="text" class="toHide" id="curTask" value="0" name="curTask">
+            <input type="text" class="toHide" id="reference" value="selectRoutine" name="reference">
+            <input type="submit" id="submitBtn" name="rout" class="btn btn-default" value="{{this.Name}}"></input>
+        </form>
+    {{/each}}
+    <script type="text/javascript">
+        $(".toHide").hide()
+    </script>
+    <!-- <div class="routineOne" id="firstButton">
         <center><a href="startOne" class="button myBtn">
             <div id="routineOneText"> Routine 1</div>
         </a></center>
@@ -35,6 +47,6 @@
         <center><a href="startThree" class="button myBtn">
             <div id="routineThreeText"> Routine 3</div>
         </a></center>
-    </div>
+    </div> -->
 </body>
 </html>
