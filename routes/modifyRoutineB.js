@@ -14,7 +14,7 @@ exports.saveRoutineB = function(req,res) {
 		var index = req.query.rout;
 	}
 	data.Users[0].Routines.push(toPush);
-	res.render('taskEditorB', data.Users[0].Routines[index]);
+	res.render('viewRoutineB', data);
 
 }
 

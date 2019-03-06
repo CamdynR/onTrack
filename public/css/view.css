@@ -104,3 +104,29 @@ body {
   margin-right: 10px;
   float: right;
 }
+
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.line {
+  height: 10px;
+  width: 10px;
+  background-color: #bbb;
+  border-radius: 0%;
+  display: inline-block;
+}
+
+.hideThis {
+  background-color: #c7c7c9;
+}
+
+#deleteTask {
+  height: 10px;
+  width: 10px;
+}
+

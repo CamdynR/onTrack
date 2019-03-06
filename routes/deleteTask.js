@@ -7,5 +7,5 @@ exports.deleteTask = function(req,res) {
 	console.log("Index");
 	console.log(index);
 	data.Users[0].Routines[parent].Tasks.splice(index,index+1);
-	res.render('taskEditorB', data.Users[0].Routines[parent]);
+	res.render('viewRoutineB', data);
 }
