@@ -25,7 +25,7 @@
     </div>
     <div id="selRoutine">
         <center><h1 id="selRoutText">Select a Routine:</h1></center>
-    </div>
+    
     <div class="routineButtons"><center>
     {{# each Users.[0].Routines}}
             <form id="selectRoutine" role="form" method='get' action='/startRoutineB'>
@@ -35,7 +35,7 @@
                 <input type="submit" id="submitBtn" name="rout" class="btn btn-default" value="{{this.Name}}"></input>
             </form>
     {{/each}}
-    </center></div>
+    </center></div></div>
     <script type="text/javascript">
         $(".toHide").hide()
     </script>

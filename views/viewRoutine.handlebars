@@ -64,6 +64,9 @@
 				<p> <span class="min">min.</span></p>
 			</div>
 		{{/with}}
+			<div class="testAddButton">
+				<button class="newTaskButton" type="button" onclick="sayNothing()">Add Task +</button>
+			</div>
 		</div>
 
 		<div class="routine2"><h1 class="routineTitle">Routine 2</h1>
@@ -102,6 +105,9 @@
 				<p> <span class="min">min.</span></p>
 			</div>
 		{{/with}}
+			<div class="testAddButton">
+				<button class="newTaskButton" type="button" onclick="sayNothing()">Add Task +</button>
+			</div>
 		</div>
 
 		<div class="routine3"><h1 class="routineTitle">Routine 3</h1>
@@ -140,9 +146,19 @@
 				<p> <span class="min">min.</span></p>
 			</div>
 		{{/with}}
+			<div class="testAddButton">
+				<button class="newTaskButton" type="button" onclick="sayNothing()">Add Task +</button>
+			</div>
 		</div>
 		<input type="submit" id="submitBtn" class="saveButton" value="save" onclick="alert('Saved!')"></input>
 	</form>		
 	</div>
+
+	<script>
+		function sayNothing(){
+			alert("This button is for Google Analytics, it does nothing");
+		}
+	</script>
+
 </body>
 </html>

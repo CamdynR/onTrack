@@ -226,8 +226,8 @@ h1 {
 }
 
 #selRoutine {
-  margin-top: -100px;
   position: absolute;
+  top: 25%;
   width: 100%;
   z-index: 0;
 }
@@ -235,10 +235,6 @@ h1 {
 #selRoutText {
   color: #727272;
   font-size: 4rem;
-}
-
-.editButton {
-  
 }
 
 #editButton1 {
@@ -258,6 +254,28 @@ h1 {
 }
 
 #editButton1:focus {
+  text-decoration: none;
+}
+
+.editButtonA {
+  margin-top: 225px;
+  position: absolute;
+  width: 100%;
+}
+
+#editButton1A {
+  color: #989898;
+  font-size: 2.5rem;
+  text-decoration:none;
+  z-index: 3;
+}
+
+#editButton1A:active {
+  color: #7c7c7c;
+  text-decoration: none;
+}
+
+#editButton1A:focus {
   text-decoration: none;
 }
 
@@ -289,7 +307,7 @@ h1 {
 /* Select Routine B */
 
 .routineButtons {
-  margin-top: 200px;
+  margin-top: 40px;
 }
 
 #submitBtn {
