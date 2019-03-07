@@ -41,37 +41,6 @@
 	<div class="circle" style="animation-delay: 0s"></div>
 	</center -->
 	<audio loop id="bellDing" src="sounds/radar.mp3" preload="auto" type="audio/mp3"></audio>
-    {{!-- <script type="text/javascript">
-    	var countDownTimer = new Date();
-        countDownTimer.setMinutes(countDownTimer.getMinutes() + {{time}} + 0.1);
-    	var counter = setInterval(function() {
-    		var currentTime = new Date().getTime();
-
-    		var timeLeft = countDownTimer - currentTime;
-
-    		var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-    		var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-            if(seconds >= 10 && minutes != 0){
-				document.getElementById("timer").innerHTML = minutes + " : " + seconds;
-			}
-			else if(seconds < 10 && minutes != 0){
-				document.getElementById("timer").innerHTML = minutes + " : 0" + seconds;
-			}
-			else if(seconds >= 10 && minutes == 0){
-				document.getElementById("timer").innerHTML = seconds;
-			}
-			else{
-				document.getElementById("timer").innerHTML = "0" + seconds;
-			}
-    		if(timeLeft < 0) {
-				document.getElementById('bellDing').play();
-    			clearInterval(counter);
-    			document.getElementById("timer").innerHTML = "Task is over!";
-                setTimeout(function(){ window.location = "startRoutineB";}, 2000);
-    		}
-    	}, 1000);
-	</script> --}}
 	<center>
 	<form id="selectRoutine" role="form" method='get' action='/startRoutineB'>
         <!-- input type="text" class="toHide" id="routIndex" value="{{this.Index}}" name="routName">
