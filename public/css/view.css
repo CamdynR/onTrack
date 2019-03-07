@@ -130,3 +130,15 @@ body {
   width: 100px;
 }
 
+.testAddButton {
+  border-top: 1px solid #c7c7c9;
+  padding-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.newTaskButton {
+  border: 1px solid #acacac;
+  background-color: #dbdbdb;
+  width: 220px;
+}

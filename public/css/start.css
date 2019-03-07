@@ -226,8 +226,8 @@ h1 {
 }
 
 #selRoutine {
-  margin-top: -130px;
   position: absolute;
+  top: 25%;
   width: 100%;
   z-index: 0;
 }
@@ -237,17 +237,15 @@ h1 {
   font-size: 4rem;
 }
 
-.editButton {
-  position: absolute;
-  width: 100%;
-  margin-top: 230px;
-  margin-right: 12px;
-}
-
 #editButton1 {
   color: #989898;
   font-size: 2.5rem;
-  text-decoration: none;
+  right: 0px;
+  padding-right: 10px;
+  position: fixed;
+  text-decoration:none;
+  top: 2px;
+  z-index: 3;
 }
 
 #editButton1:active {
@@ -256,6 +254,28 @@ h1 {
 }
 
 #editButton1:focus {
+  text-decoration: none;
+}
+
+.editButtonA {
+  margin-top: 225px;
+  position: absolute;
+  width: 100%;
+}
+
+#editButton1A {
+  color: #989898;
+  font-size: 2.5rem;
+  text-decoration:none;
+  z-index: 3;
+}
+
+#editButton1A:active {
+  color: #7c7c7c;
+  text-decoration: none;
+}
+
+#editButton1A:focus {
   text-decoration: none;
 }
 
@@ -281,4 +301,47 @@ h1 {
   padding-right: 10px;
   padding-top: 5px;
   padding-bottom: 0px;
+}
+
+
+/* Select Routine B */
+
+.routineButtons {
+  margin-top: 40px;
+}
+
+#submitBtn {
+  background-color: white;
+  margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  height: 40px;
+  width: 65%;
+}
+
+#submitBtnNext {
+  background-color: white;
+  margin-top: 30px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  height: 40px;
+  width: 65%;
+}
+
+.selectBar {
+  width: 100%;
+  height: 45px;
+  position: fixed;
+  background-color: #efeef3;
+  z-index: 1;
+  top: 0;
+}
+
+
+/* End Routine B */
+
+#routineComplete {
+  margin-top: 175px;
 }
