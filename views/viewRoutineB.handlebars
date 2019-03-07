@@ -22,33 +22,39 @@
 	{{# each Users.[0].Routines}}
 		<!-- <h1>{{this.Name}}</h1> -->
 		<!-- <a href="taskEditor" id="{{@index}}"><h1>{{this.Name}}</h1></a> -->
-		<form id="selectRoutine" role="form" method='get' action='/modifyExistingB'>
-			<input type="text" class="toHide" id="routIndex" value="{{@index}}" name="routName">
-			<input type="submit" id="submitBtn" name="rout" class="btn btn-default" value="{{this.Name}}"></input>
+		<form id="selectRoutine" role="form" method='get' action='/editTasks'>
+			<input type="text" class="toHide" id="routIndex" value="{{@index}}" name="routName"></input>
+			<div class="form-group">
+	    		<input type="text" class="toHide" id="editIndex" placeholder="Description" value="{{@index}}" name="editIndex"></input>
+	    	</div>
+			<div>
+				<div id="nameOfRoutine">{{this.Name}}</p>
+				<input type="submit" id="editBtn" name="edit" class="btn btn-default" value="edit"></input>
+			</div>
+			<input type="submit" id="submitBtn" name="rout" class="toHide" value="{{this.Name}}"></input>
 		</form>
 		<form id="deleteRoutine" role="form" method='get' action='/deleteRoutine'>
 			<div class="form-group">
 		      <input type="text" class="toHide" id="routIndex" value="{{@index}}" name="routIndex">
 		    </div>
-			<input type="submit" id="submitBtn" name="task" class="btn btn-default" value="Delete"></input>
+			<input type="submit" id="submitBtn" name="task" class="btn btn-default" value="Delete Routine"></input>
 		</form>
 		{{# each Tasks}}
 			<div class="hideThis" id="tasks"> <span class="dot"></span> 
 				{{this.name}} <span class="line"></span><span class="line"></span>
 				<span class="line"></span><span class="line"></span> {{this.time}} min.
 			</div>
-			<form id="deleteRoutine" role="form" method='get' action='/deleteTask'>
-			<div class="form-group">
-		      <input type="text" class="toHide" id="parRout" placeholder="Description" value="{{../Index}}" name="parentRoutine">
-		      <input type="text" class="toHide" id="taskIndex" placeholder="Description" value="{{@index}}" name="taskIndex">
-		    </div>
-			<input type="submit" id="deleteTask" name="task" class="btn btn-default" value=""></input>
+			<form id="deletenow" role="form" method='get' action='/deleteTask'>
+				<div class="form-group">
+		    		<input type="text" class="toHide" id="parRout" placeholder="Description" value="{{../Index}}" name="parentRoutine"></input>
+		      		<input type="text" class="toHide" id="taskIndex" placeholder="Description" value="{{@index}}" name="taskIndex"></input>
+		    	</div>
+				<input type="submit" id="deleteTask" name="task" class="btn btn-default" value="Delete Task"></input>
 			</form>
-
 		{{/each}}
 		<form id="modifyTask" role="form" method='get' action='/modifyTasksB'>
 			<div class="form-group">
-				<input type="text" class="form-control" id="curName" placeholder="Name" name="tempName">
+				<input type="text" class="form-control" id="curName" placeholder="Enter new task..." name="tempName">
 				<input id="curTime" name="tempTime" class="timeIn" type="number" ></input>
 				<p> <span class="min">min.</span></p>
 			</div>

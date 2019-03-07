@@ -29,17 +29,19 @@
 
 	<!-- {{!-- <p name="parentRoutine">{{this.Index}}</p> --}} -->
 	<p id="taskLength" value="{{this.Tasks}}"></p>
-	{{# each Tasks}}
-		<h2> Description: {{this.name}}</h2>
-		<h2> Time: {{this.time}} min.</h2>
-		<form id="deleteRoutine" role="form" method='get' action='/deleteTask'>
-			<div class="form-group">
-		      <input type="text" class="toHide" id="parRout" placeholder="Description" value="{{../Index}}" name="parentRoutine">
-		      <input type="text" class="toHide" id="taskIndex" placeholder="Description" value="{{@index}}" name="taskIndex">
-		    </div>
-			<input type="submit" id="submitBtn" name="task" class="btn btn-default" value="Delete"></input>
-		</form>
-	{{/each}}
+		{{# each Tasks}}
+			<div class="hideThis" id="tasks"> <span class="dot"></span> 
+				{{this.name}} <span class="line"></span><span class="line"></span>
+				<span class="line"></span><span class="line"></span> {{this.time}} min.
+			</div>
+			<form id="deleteRoutine" role="form" method='get' action='/deleteTask'>
+				<div class="form-group">
+		    		<input type="text" class="toHide" id="parRout" placeholder="Description" value="{{../Index}}" name="parentRoutine">
+		      		<input type="text" class="toHide" id="taskIndex" placeholder="Description" value="{{@index}}" name="taskIndex">
+		    	</div>
+				<input type="submit" id="deleteTask" name="task" class="btn btn-default" value=""></input>
+			</form>
+		{{/each}}
 	<form id="modifyRoutine" role="form" method='get' action='/modifyTasksB'>
 		<div class="form-group">
 			<input type="text" class="form-control" id="curName" placeholder="Name" name="tempName">
