@@ -30,16 +30,16 @@
 
 	<div class="mainBody">
 	<form id="updateTasks" role="form" method='get' action='/updateTasks'>
-		<center><input id="routineInputbox" name="routName" value="{{this.Name}}" onfocus="this.placeholder = ''" onblur="this.placeholder = '{{this.Name}}'"></h1></center>
+		<center><input id="routineInputbox" name="routName" value="{{this.Name}}"></h1></center>
 		<input type="text" class="toHide" id="editIndex" value="{{this.Index}}" name="editIndex">
 		<!-- {{!-- <p name="parentRoutine">{{this.Index}}</p> --}} -->
 		<p id="taskLength" value="{{this.Tasks}}"></p>
 		<center>
 		{{# each Tasks}}
 			<h3 class="inputTitle">Task:</h3>
-			<input id="editInputbox" type="text" name="tempName" value="{{this.name}}" onfocus="this.placeholder = ''" onblur="this.placeholder = '{{this.name}}'"></input>
+			<input id="editInputbox" type="text" name="tempName" value="{{this.name}}"></input>
 			<h3 class="inputTitle">Time:</h3>
-			<input id="editInputbox" type="number" name="tempTime" value="{{this.time}}" onfocus="this.placeholder = ''" onblur="this.placeholder = '{{this.time}}'"></input>
+			<input id="editInputbox" type="number" name="tempTime" value="{{this.time}}"></input>
 			<div class="spaceBuffer"></div>
 		{{/each}}
 		</center>
