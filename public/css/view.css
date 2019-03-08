@@ -84,10 +84,25 @@ body {
 }
 
 .timeIn::placeholder {
-  font-family: 'Roboto', sans-serif;
+  color: black;
+  font-size: 1.7rem;
+  text-align: center;
 }
 
 .timeIn {
+  color: black;
+  font-size: 1.7rem;
+  float: right;
+  margin-right: 43px;
+  text-align: center;
+  width: 35px;
+}
+
+.timeInB::placeholder {
+  font-family: 'Roboto', sans-serif;
+}
+
+.timeInB {
   color: black;
   font-size: 1.7rem;
   margin-top: -32px;
@@ -248,4 +263,56 @@ body {
 #curNameRoutine {
   width: 70%;
   margin-left: 10px;
+}
+
+.mainBody {
+  margin-top: 100px;
+}
+
+#saveTaskBtn {
+  background: none;
+  color: #43af43;
+  float: right;
+  font-size: 2.7rem;
+  right: 1px;
+  top: 17px;
+  position: fixed;
+  z-index: 4;
+  padding-bottom: 0px;
+  text-shadow:none !important;
+  border:none !important;
+  box-shadow:none !important;
+}
+
+#routineInputbox {
+  width: 45%;
+  font-size: 2.5rem;
+  text-align: center;
+  color: black;
+}
+
+#routineInputbox::placeholder {
+  color: black;
+}
+
+#editInputbox {
+  color: black;
+  position: absolute;
+  margin-top: -38px;
+  margin-left: -60px;
+  width: 180px;
+  font-size: 1.7rem;
+}
+
+#editInputbox::placeholder {
+  color: black;
+}
+
+.spaceBuffer {
+  height: 30px;
+  width: 100%;
+}
+
+.inputTitle {
+  margin-left: -190px;
 }

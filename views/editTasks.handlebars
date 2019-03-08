@@ -18,21 +18,34 @@
 
 <body>
 	<!-- Main Top Bar -->
-	<a href="\viewRoutineB" id="button">back</a>
+	<div class="topBar">
+		<a href="\viewRoutineB" id="backButton">back</a>
+		<center><h1 id="yourRoutine">Edit</h1></center>
 
+		<div id="backArrow">
+				<img src="images/leftArrowGray.png" class="img-responsive"></img>
+		</div>
+		<!-- button type="button" class="saveButton" onclick="saveRoutine()">save</button -->
+	</div>
+
+	<div class="mainBody">
 	<form id="updateTasks" role="form" method='get' action='/updateTasks'>
-		<center><input name="routName" value="{{this.Name}}"></h1></center>
+		<center><input id="routineInputbox" name="routName" placeholder="{{this.Name}}" onfocus="this.placeholder = ''" onblur="this.placeholder = '{{this.Name}}'"></h1></center>
 		<input type="text" class="toHide" id="editIndex" value="{{this.Index}}" name="editIndex">
 		<!-- {{!-- <p name="parentRoutine">{{this.Index}}</p> --}} -->
 		<p id="taskLength" value="{{this.Tasks}}"></p>
+		<center>
 		{{# each Tasks}}
-			<h2> Description:</h2>
-			<input type="text" name="tempName" value="{{this.name}}"></input>
-			<h2> Time: </h2>
-			<input type="number" name="tempTime" value="{{this.time}}"></input>
+			<h3 class="inputTitle">Task:</h3>
+			<input id="editInputbox" type="text" name="tempName" placeholder="{{this.name}}" onfocus="this.placeholder = ''" onblur="this.placeholder = '{{this.name}}'"></input>
+			<h3 class="inputTitle">Time:</h3>
+			<input id="editInputbox" type="number" name="tempTime" placeholder="{{this.time}}" onfocus="this.placeholder = ''" onblur="this.placeholder = '{{this.time}}'"></input>
+			<div class="spaceBuffer"></div>
 		{{/each}}
-		<input type="submit" id="submitBtn" name="saveTasks" class="btn btn-default" value="Save" onclick="alert('Saved Successfully!');"></input>
+		</center>
+		<input type="submit" id="saveTaskBtn" name="saveTasks" class="btn btn-default" value="save" onclick="alert('Saved Successfully!');"></input>
 	</form>
+  </div>
 	<script type="text/javascript">
 		$(".toHide").hide()
 	</script>
