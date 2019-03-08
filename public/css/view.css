@@ -84,18 +84,17 @@ body {
 }
 
 .timeIn::placeholder {
-  color: black;
-  font-size: 1.7rem;
-  text-align: center;
+  font-family: 'Roboto', sans-serif;
 }
 
 .timeIn {
   color: black;
   font-size: 1.7rem;
-  float: right;
-  margin-right: 43px;
+  margin-top: -32px;
+  margin-left: 210px;
+  position: absolute;
   text-align: center;
-  width: 35px;
+  width: 55px;
 }
 
 .min {
@@ -122,12 +121,18 @@ body {
 }
 
 .hideThis {
-  background-color: #c7c7c9;
+  background-color: white;
 }
 
 #deleteTask {
-  height: 30px;
+  height: 25px;
   width: 100px;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  float: right;
+  font-weight: 800;
+  margin-top: -32px;
+  margin-right: 10px;
 }
 
 .testAddButton {
@@ -141,4 +146,106 @@ body {
   border: 1px solid #acacac;
   background-color: #dbdbdb;
   width: 220px;
+}
+
+#backButtonView {
+  margin-left: 5px;
+  margin-top: -45px;
+  position: absolute;
+  color: black;
+  font-size: 1.7rem;
+}
+
+.bViewForm {
+  margin-top: 85px;
+}
+
+#selectRoutine {
+  background-color: white;
+  border-top: 1px solid #c7c7c9;
+}
+
+#nameOfRoutineB {
+  margin-top: -14px;
+  height: 35px;
+}
+
+#editBtnB {
+  float: right;
+  margin-right: 150px;
+  margin-top: -40px;
+  text-align: center;
+  height: 25px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 800;
+  padding-bottom: 0px;
+  width: 70px;
+}
+
+#divider {
+  height: 30px;
+  background-color: #efeef3;
+  border-top: 1px solid #c7c7c9;
+  margin-top: 0px;
+}
+
+.taskNameText {
+  font-size: 2rem;
+  background-color: white;
+  margin-left: 10px;
+  border-top: 1px solid #c7c7c9;
+  padding-top: 5px;
+  margin-bottom: -10px;
+}
+
+#deleteRoutine {
+  float: right;
+  margin-top: -48px;
+  margin-right: 10px;
+  color: red;
+}
+
+#deleteRoutine input {
+  width: 120px;
+  height: 25px;
+  color: red;
+}
+
+#curNameTask {
+  margin-left: 10px;
+  margin-top: 15px;
+  width: 180px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.7rem;
+}
+
+#modifyTask {
+  border-top: 1px solid #c7c7c9;
+}
+
+#submitBtnTask {
+  float: right;
+  margin-right: 10px;
+  margin-top: -50px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+}
+
+#submitBtnRoutine {
+  float: right;
+  margin-top: 0px;
+  width: 70px;
+  margin-right: 10px;
+}
+
+#modifyRoutine {
+  border-top: 1px solid #c7c7c9;
+  border-bottom: 1px solid #c7c7c9;
+  padding-top: 10px;
+  height: 55px;
+}
+
+#curNameRoutine {
+  width: 70%;
+  margin-left: 10px;
 }

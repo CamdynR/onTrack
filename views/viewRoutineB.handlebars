@@ -17,7 +17,18 @@
 </head>
 
 <body>
-	<a href="\loggedInB" id="button">back</a>
+		
+	<div class="topBar">
+		<a href="\loggedInB" id="backButton">back</a>
+		<center><h1 id="yourRoutine">View</h1></center>
+
+		<div id="backArrow">
+				<img src="images/leftArrowGray.png" class="img-responsive"></img>
+		</div>
+		<!-- button type="button" class="saveButton" onclick="saveRoutine()">save</button -->
+	</div>
+
+	<div class="bViewForm">
 	<!-- Main Top Bar -->
 	{{# each Users.[0].Routines}}
 		<!-- <h1>{{this.Name}}</h1> -->
@@ -28,8 +39,8 @@
 	    		<input type="text" class="toHide" id="editIndex" placeholder="Description" value="{{@index}}" name="editIndex"></input>
 	    	</div>
 			<div>
-				<div id="nameOfRoutine">{{this.Name}}</p>
-				<input type="submit" id="editBtn" name="edit" class="btn btn-default" value="edit"></input>
+				<div id="nameOfRoutineB" class="routineTitle">{{this.Name}}</p>
+				<input type="submit" id="editBtnB" name="edit" class="btn btn-default" value="Edit"></input>
 			</div>
 			<input type="submit" id="submitBtn" name="rout" class="toHide" value="{{this.Name}}"></input>
 		</form>
@@ -40,9 +51,8 @@
 			<input type="submit" id="submitBtn" name="task" class="btn btn-default" value="Delete Routine"></input>
 		</form>
 		{{# each Tasks}}
-			<div class="hideThis" id="tasks"> <span class="dot"></span> 
-				{{this.name}} <span class="line"></span><span class="line"></span>
-				<span class="line"></span><span class="line"></span> {{this.time}} min.
+			<div class="hideThis" id="tasks">
+				<div class="taskNameText">{{this.name}} ({{this.time}} min.)</div>
 			</div>
 			<form id="deletenow" role="form" method='get' action='/deleteTask'>
 				<div class="form-group">
@@ -54,22 +64,24 @@
 		{{/each}}
 		<form id="modifyTask" role="form" method='get' action='/modifyTasksB'>
 			<div class="form-group">
-				<input type="text" class="form-control" id="curName" placeholder="Enter new task..." name="tempName">
-				<input id="curTime" name="tempTime" class="timeIn" type="number" ></input>
-				<p> <span class="min">min.</span></p>
+				<input type="text" class="form-control" id="curNameTask" placeholder="Enter new task..." name="tempName">
+				<input id="curTimeTask" name="tempTime" class="timeIn" type="number" placeholder="min."></input>
 			</div>
 			<div class="form-group">
 				<input type="text" class="toHide" id="routIndex" name="routIndex" value="{{this.Index}}">
-				<input type="submit" id="submitBtn" class="btn btn-default" name="indexer" value="Add Task"></input>
+				<input type="submit" id="submitBtnTask" class="btn btn-default" name="indexer" value="Add Task"></input>
 			</div>
+			<div id="divider"></div>
 		</form>
 	{{/each}} 
 	<form id="modifyRoutine" role="form" method='get' action='/modifyRoutineB'>
 		<div class="form-group">
-			<input type="submit" id="submitBtn" class="btn btn-default" value="Add Routine"></input>
-			<input type="text" class="form-control" id="curName" placeholder="Name" name="tempName">
+			<input type="submit" id="submitBtnRoutine" class="btn btn-default" value="Add"></input>
+			<input type="text" class="form-control" id="curNameRoutine" placeholder="Routine Name" name="tempName">
 		</div>
 	</form>
+	</div>
+
 	<script type="text/javascript">
 		$(".toHide").hide()                                               
 	</script>
