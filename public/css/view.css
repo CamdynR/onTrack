@@ -1,16 +1,129 @@
 /*View CSS File*/
 
+
+
+
 html {
-  background-color: #efeef3;
+  background: linear-gradient(to right, #616161, #9bc5c3); 
   font-family: 'Roboto', sans-serif;
 }
 
 body {
-  background-color: #efeef3;
+  background: linear-gradient(to right, #616161, #9bc5c3);}
+
+
+.swing {
+    display: inline-block;
+    width: 215px;
+    padding: 10px 0 10px 15px;
+    font-family: "Open Sans", sans;
+    font-weight: 400;
+    color: #377D6A;
+    background: #efefef;
+    border: 0;
+    border-radius: 3px;
+    outline: 0;
+    text-indent: 60px
+    transition all .3s ease-in-out;
 }
+    
+::-webkit-input-placeholder {
+      color: #efefef;
+      text-indent: 0;
+      font-weight: 300;
+    }
+  
+label {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px 15px;
+      text-shadow: 0 1px 0 rgba(19,74,70,.4);
+      background: #7AB893;
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+      transform-origin: 2px 2px;
+      transform: rotate(0);
+     
+      animation: swing-back .4s 1 ease-in-out;
+    }
+
+  @keyframes swing {
+    0% {
+      transform: rotate(0);
+    }
+    20% {
+      transform: rotate(116deg);
+    }
+    40% {
+      transform: rotate(60deg);
+    }
+    60% {
+      transform: rotate(98deg);
+    }
+    80% {
+      transform: rotate(76deg);
+    }
+    100% {
+      transform: rotate(82deg);
+    }
+  }
+  @keyframes swing-back {
+    0% {
+      transform: rotate(82deg);
+    }
+    100% {
+      transform: rotate(0);
+    }
+  }
+  .swing:focus,
+  .swing:active {
+    color: #377D6A;
+    text-indent: 0;
+    background: #fff;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+    
+    ::-webkit-input-placeholder {
+      color: #aaa;
+    }
+    label {
+      animation: swing 1.4s 1 ease-in-out;
+      transform: rotate(82deg);
+    }
 
 #editBtn {
   color: #b7b7b7;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.form__field {
+  width: 360px;
+  background: #fff;
+  color: #a3a3a3;
+  font: inherit;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  border: 0;
+  outline: 0;
+  padding: 22px 18px;
+}
+
+.btn--inside {
+  margin-left: -96px;
+}
+
+.btn--primary {
+  background: #7f8ff4;
+  color: #fff;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  
+  padding: 12px 36px;
 }
 
 .taskTitles {
