@@ -33,57 +33,69 @@
          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
          })(window,document,'script','dataLayer','GTM-PD8DDSS');
       </script>
+
+
    </head>
    <body background="/images/Treat your life like a game.jpg">
       <!-- Google Tag Manager (noscript) -->
       <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PD8DDSS"
          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- End Google Tag Manager (noscript) -->
-      <div class="topBar">
-         <a href="\loggedInB" id="backButton">back</a>
-         <center>
-            <h1 id="yourRoutine">View</h1>
-         </center>
-         <div id="backArrow">
-            <img src="images/leftArrowGray.png" class="img-responsive"></img>
-         </div>
-         <!-- button type="button" class="saveButton" onclick="saveRoutine()">save</button -->
-      </div>
+
+
+      <script src="/js/navBar.js"></script>
+      <div w3-include-html="/js/navBar.html"></div>
+
+      <script>
+         includeHTML();
+      </script>
+
+
       <div class="bViewForm">
          <!-- Main Top Bar -->
-         {{# each Users.[0].Routines}}
+   
+
          <!-- <h1>{{this.Name}}</h1> -->
          <!-- <a href="taskEditor" id="{{@index}}"><h1>{{this.Name}}</h1></a> -->
          <!-- Button trigger modal -->
          <a data-toggle="modal" href="#myModal1" class="btn btn-primary btn-lg">Edit</a>
          <!-- Modal -->
+         
          <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+         {{# each Users.[0].Routines}}
             <div class="modal-dialog">
                <div class="modal-content">
                   <div class="modal-header">
                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                     <h4 class="modal-title">Edit {{this.Name}}</h4>
+                     <h4 class="modal-title">{{this.Name}}</h4>
                   </div>
                   <div class="modal-body">
-                        <form id="updateTasks" role="form" method='get' action='/updateTasks'>
-                        <center><input id="routineInputbox" name="routName" value="{{this.Name}}"></h1></center>
-                        <input type="text" class="toHide" id="editIndex" value="{{this.Index}}" name="editIndex">
-                        <p id="taskLength" value="{{this.Tasks}}"></p>
+                      <form id="deleteRoutine" role="form" method='get' action='/deleteRoutine'>
+                        <div class="form-group">
+                           <input type="text" class="toHide" id="routIndex" value="{{@index}}" name="routIndex">
+                        </div>
+                        <input type="submit" id="submitBtn" name="task" class="btn btn-default" value="Delete Routine"></input>
+                     </form>
+                     <form id="updateTasks" role="form" method='get' action='/updateTasks'>
+          		         <center><input id="routineInputbox" name="routName" value="{{this.Name}}"></h1></center>
+		                  <input type="text" class="toHide" id="editIndex" name="editIndex" value="{{this.Index}}">
                         <center>
                            {{# each Tasks}}
                            <h3 class="inputTitle">Task:</h3>
-				   <input type="text" class="form__field" name="tempName" value="{{this.name}}"/>
+				               <input type="text" class="form__field" name="tempName" value="{{this.name}}"/>
                            <h3 class="inputTitle">Time:</h3>
                            <input id="editInputbox" type="number" name="tempTime" value="{{this.time}}"></input>
                            <div class="spaceBuffer"></div>
                            {{/each}}
                         </center>
                   </div>
-                  <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  <button type="submit" id="saveChanges" name="saveTasks" class="btn btn-default" value="save">Save Changes</button>
-                  </div>
-                  </form>
+                     
+                     <div class="modal-footer">
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                     <button type="submit" id="saveChanges" name="saveTasks" class="btn btn-default" value="save">Save Changes</button>
+                     </div>
+                     </form>
+
                </div>
                <!-- /.modal-content -->
             </div>
@@ -116,6 +128,7 @@
                <!-- /.modal-content -->
             </div>
             <!-- /.modal-dialog -->
+         {{/each}}
          </div>
          <!-- /.modal -->
 
@@ -140,18 +153,18 @@
          <form id="modifyTask" role="form" method='get' action='/modifyTasksB'>
             <div class="form-group">
 			<center>
-				<input type="text" class="form__field" placeholder="+ Add New Task" name="tempName"/>
+				<input type="text" class="form__field" placeholder="+ Add New Task!" name="tempName"/>
 				<button type="submit" class="btn btn--primary btn--inside uppercase">Add</button>
 			</center>
                <input type="text" class="toHide" id="routIndex" name="routIndex" value="{{this.Index}}">
             </div>
             <div id="divider"></div>
          </form> 
-		{{/each}}
+	{{/each}}
          <form id="modifyRoutine" role="form" method='get' action='/modifyRoutineB'>
             <div class="form-group">
 				<center>
-					<input type="text" class="form__field" value="{{this.Name}}" name="routName"/>
+					<input type="text" class="form__field" value="+ Add New Routine!" name="routName"/>
 					<button type="submit" class="btn btn--primary btn--inside uppercase">Add</button>
 				</center>
             </div>
