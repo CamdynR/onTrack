@@ -33,23 +33,25 @@
          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
          })(window,document,'script','dataLayer','GTM-PD8DDSS');
       </script>
+
+
    </head>
    <body background="/images/Treat your life like a game.jpg">
       <!-- Google Tag Manager (noscript) -->
       <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PD8DDSS"
          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- End Google Tag Manager (noscript) -->
-      <div class="topBar">
-         <a href="\loggedInB" id="backButton">back</a>
-         <center>
-            <h1 id="yourRoutine">View</h1>
-         </center>
-         <div id="backArrow">
-            <img src="images/leftArrowGray.png" class="img-responsive"></img>
-         </div>
-         <!-- button type="button" class="saveButton" onclick="saveRoutine()">save</button -->
-      </div>
-      <div class="bViewForm">
+
+
+      <script src="/js/navBar.js"></script>
+      <div w3-include-html="/js/navBar.html"></div>
+
+      <script>
+         includeHTML();
+      </script>
+
+
+      {{!-- <div class="bViewForm">
          <!-- Main Top Bar -->
          {{# each Users.[0].Routines}}
          <!-- <h1>{{this.Name}}</h1> -->
@@ -156,7 +158,7 @@
 				</center>
             </div>
          </form>
-      </div>
+      </div> --}}
       <script type="text/javascript">
          $(".toHide").hide()                                               
       </script>
