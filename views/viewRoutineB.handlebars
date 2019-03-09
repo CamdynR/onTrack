@@ -65,17 +65,16 @@
                      <h4 class="modal-title">Edit {{this.Name}}</h4>
                   </div>
                   <div class="modal-body">
-                     <form id="updateTasks" role="form" method='get' action='/updateTasks'>
+                        <form id="updateTasks" role="form" method='get' action='/updateTasks'>
                         <center><input id="routineInputbox" name="routName" value="{{this.Name}}"></h1></center>
                         <input type="text" class="toHide" id="editIndex" value="{{this.Index}}" name="editIndex">
                         <p id="taskLength" value="{{this.Tasks}}"></p>
                         <center>
                            {{# each Tasks}}
                            <h3 class="inputTitle">Task:</h3>
-						   <input type="email" class="form__field" placeholder="Your E-Mail Address" />
-			<button type="button" class="btn btn--primary btn--inside uppercase">Send</button>
+				   <input type="text" class="form__field" name="tempName" value="{{this.name}}"/>
                            <h3 class="inputTitle">Time:</h3>
-                           <input id="editInputbox" type="number" name="tempTime" value="{{time}}"></input>
+                           <input id="editInputbox" type="number" name="tempTime" value="{{this.time}}"></input>
                            <div class="spaceBuffer"></div>
                            {{/each}}
                         </center>
@@ -140,20 +139,19 @@
          	{{/each}}
          <form id="modifyTask" role="form" method='get' action='/modifyTasksB'>
             <div class="form-group">
-               <input type="text" class="form-control" id="curNameTask" placeholder="Enter new task..." name="tempName">
-               <input id="curTimeTask" name="tempTime" class="timeInB" type="number" placeholder="min."></input>
-            </div>
-            <div class="form-group">
+			<center>
+				<input type="text" class="form__field" placeholder="+ Add New Task" name="tempName"/>
+				<button type="submit" class="btn btn--primary btn--inside uppercase">Add</button>
+			</center>
                <input type="text" class="toHide" id="routIndex" name="routIndex" value="{{this.Index}}">
-               <input type="submit" id="submitBtnTask" class="btn btn-default" name="indexer" value="Add Task"></input>
             </div>
             <div id="divider"></div>
          </form> 
-		 {{/each}}
+		{{/each}}
          <form id="modifyRoutine" role="form" method='get' action='/modifyRoutineB'>
             <div class="form-group">
 				<center>
-					<input type="text" class="form__field" placeholder="Routine Name" name="tempName"/>
+					<input type="text" class="form__field" value="{{this.Name}}" name="routName"/>
 					<button type="submit" class="btn btn--primary btn--inside uppercase">Add</button>
 				</center>
             </div>

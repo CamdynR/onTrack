@@ -2,6 +2,7 @@ var data = require('../currentUsers.json');
 
 exports.updateTasks = function(req,res) {
 	var index = req.query.editIndex;
+	console.log(index);
 	var routineName = req.query.routName;
 	var routineIndex = req.query.editIndex;
 	var taskArr = [];

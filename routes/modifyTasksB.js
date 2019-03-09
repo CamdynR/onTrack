@@ -5,9 +5,6 @@ exports.modifyTasksB = function(req,res) {
 	var index = req.query.routIndex;
 	var stay = req.query.stayOnPage;
 	data.Users[0].Routines[index].Tasks.push(toPush);
-	if(stay){
-		res.render('taskEditorB', data.Users[0].Routines[index]);
-	}else{
 		res.render('viewRoutineB', data);
-	}
+
 }
