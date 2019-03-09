@@ -11,7 +11,12 @@ exports.updateTasks = function(req,res) {
 	var toPush;
 	var toLoop = data.Users[0].Routines[index].Tasks.length;
 	for (i = 0; i < toLoop; i++) {
-		toPush = {"name": taskName[i], "time": taskTime[i]}
+		if (typeof taskName == "string") {
+			toPush = {"name": taskName, "time": taskTime}
+		}
+		else {
+			toPush = {"name": taskName[i], "time": taskTime[i]}
+		}	
 		taskArr.push(toPush);
 	}
 	var newDict = {"Name": routineName, "Index": routineIndex, "Tasks": taskArr};
