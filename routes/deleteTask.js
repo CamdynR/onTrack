@@ -7,6 +7,12 @@ exports.deleteTask = function(req,res) {
 	var stay = req.query.stayOnPage;
 	console.log("Index");
 	console.log(index);
-	data.Users[0].Routines[parent].Tasks.splice(index,index+1);
+	if (index == 0) {
+		data.Users[0].Routines[parent].Tasks.splice(index,index+1);
+	}
+	else {
+		data.Users[0].Routines[parent].Tasks.splice(index,index);	
+	}
+	
 	res.render('viewRoutineB', data);
 }
