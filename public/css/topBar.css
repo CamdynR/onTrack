@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,300);
+@import url(https://fonts.googleapis.com/css?family=Squada+One);
+
 .topBar {
   background: #003366;
   border-bottom: 1px solid #a8a7ac;
@@ -8,21 +11,36 @@
   z-index: 1;
 }
 
-#backButton {
-  color: #b7b7b7;
-  font-size: 2.5rem;
-  left: 0px;
-  padding-left: 20px;
-  position: fixed;
-  text-decoration:none;
-  top: 26px;
-  z-index: 3;
+#titleNav {
+  font-family: 'Open Sans', sans-serif;
+  color:  olive;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: -3px;
+  line-height: 1;
+  text-shadow: #EDEDED 2px 1px 0;
+  position: relative;
 }
 
 #backButton {
-  color: #b7b7b7;
+  background-color: #ddd;
+  border: none;
+  color: black;
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+  margin-top: -15px;
+  margin-left: 5px;
   font-size: 2.5rem;
   left: 0px;
+  padding-left: 20px;
+  color: black;
   padding-left: 20px;
   position: fixed;
   text-decoration:none;
@@ -32,15 +50,6 @@
 
 #backButton:active {
   color: #989898
-}
-
-#backArrow {
-  height: 15px;
-  left: 5px;
-  position: absolute;
-  top: 36px;
-  width: 8px;
-  z-index: 0;
 }
 
 .saveButton {
@@ -61,4 +70,8 @@
 
 .saveButton:focus {
   outline: none;
+}
+
+#backButton:hover {
+  background: darkslategray;
 }
