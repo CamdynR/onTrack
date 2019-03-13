@@ -52,14 +52,25 @@
       <div class="container">
             <a id="logo">Your Routines</a>
             {{# each Users.[0].Routines}}
-            <button class="accordion">{{this.Name}}</button>
+            <form id="deleteRoutine" role="form" method='get' action='/deleteRoutine'>
+               <input type="text" class="toHide" id="routIndex" value="{{@index}}" name="routIndex">
+               <button type="submit" id="submitBtn" name="task" class="btn-delete"><img src="/images/trashCan.png"></img></button>
+            </form>
+            <button type="button" class="accordion">
+               {{this.Name}}
+            </button>
             <div class="accordion-content">
                   <p>
+                     <form id="selectRoutine" role="form" method='get' action='/editTasks'>
+			      <input type="text" class="toHide" id="routIndex" value="{{@index}}" name="routName"></input>
+	    		      <input type="text" class="toHide" id="editIndex" placeholder="Description" value="{{@index}}" name="editIndex"></input>
+				      <input type="submit" id="editBtnB" name="edit" class="btn-edit" value="Edit {{this.Name}}"></input>
+			         <input type="submit" id="submitBtn" name="rout" class="toHide" value="{{this.Name}}"></input>
+		         </form>
                         {{# each Tasks}}
                         <div class="taskContainer">
                               <div class="hideThis" id="tasks">
-                                    <div class="taskNameText">
-                                          {{this.name}} ({{this.time}} min.)
+                                    <div class="taskNameText">{{this.name}} ({{this.time}} min.)
                                           <form id="deletenow" role="form" method='get' action='/deleteTask'>
                                                 <div class="form-group">
                                                       <input type="text" class="toHide" id="parRout" placeholder="Description" value="{{../Index}}" name="parentRoutine"></input>
@@ -74,8 +85,8 @@
                         <form id="modifyTask" role="form" method='get' action='/modifyTasksB'>
                               <div class="form-group">
                                     <center>
-                                          <input type="text" class="form__field" id="move" placeholder="+ Add new task!" name="tempName"/>
-                                          <input type="text" class="form__field" placeholder="+ Add the time!" name="tempTime"/>
+                                          <input type="text" class="form__field" id="move" placeholder="+ add new task!" name="tempName"/>
+                                          <input type="number" class="form__field" placeholder="+ add the time!" name="tempTime"/>
                                           <button type="submit" class="btn btn--primary btn--inside uppercase">Add Task</button>
                                     </center>
                                     <input type="text" class="toHide" id="routIndex" name="routIndex" value="{{this.Index}}">
@@ -83,14 +94,17 @@
                         </form>
                   </p>
             </div>
-            {{/each}}
+            
+         {{/each}}
+         <form id="modifyRoutine" role="form" method='get' action='/modifyRoutineB'>
+            <div class="form-group">
+				   <center>
+					   <input type="text" class="form__field" id="newRoutine" placeholder="+ add new routine!" name="routName"/>
+					   <button type="submit" class="btn-add uppercase">Add</button>
+				   </center>
+            </div>
+         </form>
       </div>
-
-
-
-
-
-
 
 
 
@@ -101,7 +115,7 @@
       </script>
       <script src="/js/modal.js"></script>
       <script type="text/javascript">
-         $(".toHide").hide()                                               
+         $(".toHide").hide()                                          
       </script>
       </body>
 </html>

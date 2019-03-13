@@ -14,21 +14,32 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript" src='/js/timer.js'> </script>
 	<!-- Main Top Bar -->
-	<div class="topBar">
-    	<a href="selectRoutineB" id="backButton">back</a>
-    	<center><h1 id="start">Routine 1</h1></center>
-    	<div id="backArrow">
-      		<img src="images/leftArrowGray.png" class="img-responsive"></img>
-    	</div>
-    </div>
 </head>
 
 <body>
-	<center>
-	<div id="nameOfRoutine"><div id="startOne">{{name}}</div>
-		<div class="centerCircle"></div>
-		<div id="timer"></div>
+	<script src="/js/navBar.js"></script>
+    <div navagationBar="/js/navBar.html"></div>
+
+	<script>
+        includeHTML();
+    </script>
+	<div class="container">
+		<center>
+			<div class="centerCircle">
+				<div id="nameOfRoutine"><div id="startOne">{{name}}</div>
+				<div id="timer"></div></div>
+				<div id="circle"></div>
+					<form id="selectRoutine" role="form" method='get' action='/startRoutineB'>
+        <!-- input type="text" class="toHide" id="routIndex" value="{{this.Index}}" name="routName">
+        <input type="text" class="toHide" id="curTask" value="0" name="curTask"> -->
+        <input type="text" class="toHide" id="reference" value="startRoutine" name="reference">
+        <input type="submit" id="submitBtnNext" name="rout" class="btn btn-default" value="Next Task"></input>
+    </form>
+			</div>
+		</center>
 	</div>
+
+
 	
 	<script>
 		var time = {{time}};
@@ -42,16 +53,10 @@
 	</center -->
 	<audio loop id="bellDing" src="sounds/radar.mp3" preload="auto" type="audio/mp3"></audio>
 	<center>
-	<form id="selectRoutine" role="form" method='get' action='/startRoutineB'>
-        <!-- input type="text" class="toHide" id="routIndex" value="{{this.Index}}" name="routName">
-        <input type="text" class="toHide" id="curTask" value="0" name="curTask"> -->
-        <input type="text" class="toHide" id="reference" value="startRoutine" name="reference">
-        <input type="submit" id="submitBtnNext" name="rout" class="btn btn-default" value="Next Task"></input>
-    </form>
 	</center>
 	<!-- <div class="next">
 		<center><a href="startOne" class="nextButton">Continue!</a></center>
-	</div> -->
+	</div> --> 
 	<script type="text/javascript">
         $(".toHide").hide()
     </script>

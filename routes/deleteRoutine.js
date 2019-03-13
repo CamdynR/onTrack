@@ -5,6 +5,15 @@ exports.deleteRoutine = function(req,res) {
 	var index = req.query.routIndex;
 	console.log("Index");
 	console.log(index);
-	data.Users[0].Routines.splice(index,index+1);
+	if (index == 0) {
+		data.Users[0].Routines.splice(index,index+1);
+	}
+	else if (index == 1) {
+		data.Users[0].Routines.splice(index,index);
+	}
+	else {
+		data.Users[0].Routines.splice(index,index-1);	
+	}
+	// data.Users[0].Routines.splice(index,index+1);
 	res.render('viewRoutineB', data);
 }

@@ -53,6 +53,53 @@ button.accordion:hover, button.accordion.is-open {
   background-color: #004080;
 }
 
+button.accordion {
+  width: 100%;
+  background-color: #003366;
+  border: 3px;
+  border-style: groove;
+  border-color: grey;
+  outline: none;
+  text-align: left;
+  padding: 15px 20px;
+  font-size: 26px;
+  color:#9ACD32;
+  text-shadow: black 1.5px 1.5px 0; 
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+}
+
+.btn-delete {
+  background-color: #003366;
+  width: 100%;
+  border: 3px;
+  border-color:silver;
+  border-style: inset;
+  margin-top:5px;
+  outline: none;
+  text-align: center;
+  padding: 5px 5px;
+  color: 	#9ACD32;
+  text-shadow: black 1.5px 1.5px 0; 
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+}
+
+.btn-edit {
+  background-color: #003366;
+  width: 100%;
+  border: 3px;
+  border-color:silver;
+  border-style: inset;
+  outline: none;
+  text-align: center;
+  padding: 5px 5px;
+  color: 	#9ACD32;
+  text-shadow: black 1.5px 1.5px 0; 
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+}
+
 .button {
   background: #428bca;
   padding: 1em 2em;
@@ -76,15 +123,31 @@ button.accordion:hover, button.accordion.is-open {
   transition: max-height 0.2s ease-in-out;
 }
 
+#newRoutine {
+  width: 100%;
+  background-color: grey;
+  border: 3px;
+  outline: none;
+  text-align: left;
+  padding: 15px 20px;
+  color: #9ACD32;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+}
+
+#newRoutine::placeholder{
+  color:#9ACD32;
+}
+
 #deleteTask {
   background-color:grey;
-  border: none;
+  border: inset;
   color: black;
   height: 30px;
 }
 
 #move {
-  margin-right: 5px;
+  margin-right: 6px;
 }
 
 ::placeholder {
@@ -103,11 +166,29 @@ button.accordion:hover, button.accordion.is-open {
   font: inherit;
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
   outline: 0;
-  padding: 22px 18px;
+  padding: 10px 10px;
 }
 
 .btn--inside {
   margin-left: -92px;
+  margin-top: -50px;
+}
+
+
+.btn-add {
+  width: 100%;
+  background-color: #003366;
+  font-family: 'Open Sans', sans-serif;
+  border: 3px;
+  outline: none;
+  text-align: center;
+  padding: 3px 5px;
+  font-size: 16px;
+
+  color: 	#9ACD32;
+  text-shadow: black 1.5px 1.5px 0; 
+  cursor: pointer;
+  transition: background-color 0.2s linear;
 }
 
 .btn--primary {
@@ -123,11 +204,11 @@ button.accordion:hover, button.accordion.is-open {
   border-style: inset;
   font-family: 'Open Sans', sans-serif;
   color: black;
-  text-align: left;
+  text-align: center;
   text-decoration: none;
   letter-spacing: 2px;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 800;
   line-height: 1.5;
   text-shadow: #9ACD32 1.5px 1.5px 0;
@@ -137,14 +218,65 @@ button.accordion:hover, button.accordion.is-open {
 
 .taskContainer {
   width: 100%;
+  height:auto;
   max-width: 800px;
-  margin: 5px auto;
+  margin: 1px auto;
   border-style: inset;
 }
 
 img {
-  max-width:10%;
+  max-width:5%;
   height:auto;
-  margin-left: 270px;
 }
 
+.modalDialog {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+.modalDialog:target {
+    opacity:1;
+    pointer-events: auto;
+}
+.modalDialog > div {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: #fff;
+    background: -moz-linear-gradient(#fff, #999);
+    background: -webkit-linear-gradient(#fff, #999);
+    background: -o-linear-gradient(#fff, #999);
+}
+.close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+.close:hover {
+    background: #00d9ff;
+}
