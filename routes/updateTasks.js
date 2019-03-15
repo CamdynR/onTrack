@@ -19,12 +19,7 @@ exports.updateTasks = function(req,res) {
 		taskArr.push(toPush);
 	}
 	var newDict = {"Name": routineName, "Index": routineIndex, "Tasks": taskArr};
-	if (index == 0) {
-		data.Users[0].Routines.splice(index,index+1);
-	}
-	else {
-		data.Users[0].Routines.splice(index,index);
-	}
+	data.Users[0].Routines.splice(index,1);
 	data.Users[0].Routines.splice(index,0,newDict);
 	res.render('editTasks', data.Users[0].Routines[index]);
 }

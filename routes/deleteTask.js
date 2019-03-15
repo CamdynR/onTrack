@@ -9,11 +9,8 @@ exports.deleteTask = function(req,res) {
 	console.log(parent);
 	console.log("taskIndex");
 	console.log(index);
-	if (index == 0) {
-		data.Users[0].Routines[parent].Tasks.splice(index,index+1);
-	}
-	else {
-		data.Users[0].Routines[parent].Tasks.splice(index,index);
-	}
+	console.log(data.Users[0].Routines[parent]);
+	data.Users[0].Routines[parent].Tasks.splice(index,1);
+	console.log(data.Users[0].Routines[parent]);
 	res.render('viewRoutineB', data);
 }

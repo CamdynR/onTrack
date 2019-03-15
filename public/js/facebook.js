@@ -12,7 +12,7 @@ function checkLoginState() {
     // Full docs on the response object can be found in the documentation
     // for FB.getLoginStatus().
     if (response.status === 'connected') {
-        window.location.href = "loggedIn";
+        window.location.href = "loggedInB";
       // Logged into your app and Facebook.
         console.log('Successfully logged in with Facebook');
         FB.api('/me?fields=name,first_name,picture.width(480)', changeUser);

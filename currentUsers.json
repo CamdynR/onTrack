@@ -4,20 +4,20 @@
 			"Name": "guestUser",
 			"Routines":[
 				{
-					"Name":"Routine1",
+					"Name":"Monday",
 					"Index": "0",
 					"Tasks":[
-						{"name":"Wake Up","time":"20"},
-						{"name":"B","time":"3"},
-						{"name":"Brush Teeth","time":"6"}]
+						{"name":"Brush Teeth","time":"5"},
+						{"name":"Make Breakfast","time":"10"},
+						{"name":"Shower","time":"15"}]
 				},
 				{
-					"Name":"Routine2",
+					"Name":"Friday",
 					"Index": "1",
 					"Tasks":[
-						{"name":"Roll","time":"20"},
-						{"name":"Dino","time":"3"},
-						{"name":"Brush Teeth","time":"6"}]
+						{"name":"Brush Teeth","time":"2"},
+						{"name":"Shower","time":"5"},
+						{"name":"Gather things for work","time":"6"}]
 				}
 			]
 		},
