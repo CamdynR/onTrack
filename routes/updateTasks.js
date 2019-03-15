@@ -10,11 +10,21 @@ exports.updateTasks = function(req,res) {
 	var toPush;
 	var toLoop = data.Users[0].Routines[index].Tasks.length;
 	for (i = 0; i < toLoop; i++) {
-		toPush = {"name": taskName[i], "time": taskTime[i]}
+		if (typeof taskName == "string") {
+			toPush = {"name": taskName, "time": taskTime}
+		}
+		else {
+			toPush = {"name": taskName[i], "time": taskTime[i]}
+		}
 		taskArr.push(toPush);
 	}
 	var newDict = {"Name": routineName, "Index": routineIndex, "Tasks": taskArr};
-	data.Users[0].Routines.splice(index,index+1);
+	if (index == 0) {
+		data.Users[0].Routines.splice(index,index+1);
+	}
+	else {
+		data.Users[0].Routines.splice(index,index);
+	}
 	data.Users[0].Routines.splice(index,0,newDict);
 	res.render('editTasks', data.Users[0].Routines[index]);
 }
